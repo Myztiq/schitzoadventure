@@ -6,7 +6,7 @@
   }
 
 
-  window.loadSounds = function(cb){
+  window.loadSounds = function(options){
 
     soundManager.setup({
       url: '/swf',
@@ -16,8 +16,9 @@
         var counter = keys.length;
         var handleLoaded = function(){
           counter--;
+          options.progress((keys.length-counter)/keys.length * 100);
           if(counter == 0){
-            cb()
+            options.complete();
           }
         }
 

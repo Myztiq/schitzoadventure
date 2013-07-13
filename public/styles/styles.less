@@ -1,5 +1,6 @@
 @backgroundColor: #353535;
 @godColor: rgba(252, 217, 23, .7);
+@loaderColor: #525252;
 
 body{
   background-color: #353535;
@@ -15,6 +16,17 @@ body{
               inset 0 0 20px @backgroundColor,
               inset 0 0 20px @backgroundColor;
   overflow: hidden;
+  opacity: 1;
+  transition: opacity 1s;
+  &.loading{
+    .loader{
+      z-index: 1;
+      opacity: 1;
+    }
+    .scene{
+      opacity: 0;
+    }
+  }
 }
 
 .scene {
@@ -111,5 +123,24 @@ body{
     top: 100px;
     left: 400px;
 
+  }
+}
+
+.loader{
+  opacity: 0;
+  z-index: 0;
+  top: 200px;
+  left: 50%;
+  margin-left: -200px;
+  position: absolute;
+  height: 20px;
+  width: 400px;
+  border: 2px solid @loaderColor;
+  transition: opacity 1s;
+  .loaderInner{
+    display: block;
+    height: 20px;
+    width: 20%;
+    background-color: @loaderColor;
   }
 }
