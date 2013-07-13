@@ -4,7 +4,7 @@ $(function(){
     setTimeout(function(){
       $('#scene1').addClass('godVisible');
       $('#scene1 .exit').click(function(){
-        $('#scene1').addClass('godShown').removeClass('godVisible');
+        $('#scene1').addClass('godHasSpoken').removeClass('godVisible');
       })
     }, 2000);
 
