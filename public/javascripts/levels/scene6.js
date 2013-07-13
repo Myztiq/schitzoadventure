@@ -36,17 +36,22 @@ $(function(){
 
   $("#husbands").click(function() {
     fadeInSound('l6b');
+    diplomacy = 'seduction';
     postChoice('scene6-husbands');
+
     $('#dialogueClicker').addClass('scene6Dialogue');
   });
   $("#trojan-horse").click(function() {
     fadeInSound('l6c');
+    diplomacy = 'trojan horse';
     postChoice('scene6-trojan');
+
     $('#dialogueClicker').addClass('scene6Dialogue');
   });
   $("#ice-cream2").click(function() {
     fadeInSound('l6a');
     scorePoint();
+    diplomacy = 'ice cream';
     postChoice('scene6-icecream');
 
     $('#dialogueClicker').addClass('scene6Dialogue');
