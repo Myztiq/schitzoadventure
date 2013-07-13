@@ -1,0 +1,38 @@
+@-webkit-keyframes wiggle{
+  0% {
+    -webkit-transform: rotate(10deg) scale(1);
+  }
+  50%{
+    -webkit-transform: scale(.8);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg) scale(1);
+  }
+}
+
+#scene1{
+  #peasants{
+    top: 100px;
+    left: 200px;
+  }
+  #pheasants{
+    top: 100px;
+    left: 600px;
+  }
+  #nobility{
+    top: 100px;
+    left: 400px;
+  }
+  .fromGod{
+    .visionText{
+      color: #000000;
+      font-size: 40px;
+      span{
+        display: block;
+        font-size: 200px;
+        text-shadow: 2px 2px 10px black;
+        -webkit-animation: wiggle 1s infinite alternate linear;
+      }
+    }
+  }
+}

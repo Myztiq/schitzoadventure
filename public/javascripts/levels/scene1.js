@@ -6,7 +6,7 @@ $(function(){
       $('#scene1 .exit').click(function(){
         $('#scene1').addClass('godHasSpoken').removeClass('godVisible');
       })
-    }, 2000);
+    }, 1000);
 
   }
 

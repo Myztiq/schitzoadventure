@@ -14,41 +14,42 @@
     <script src='/javascripts/levels/end.js'></script>
   </head>
   <body>
-  <div class="gameWrapper loading">
-    <div class="loader"><div class="loaderInner"></div></div>
-    <div id="main-menu" class="scene active">
-        <button id="start">Start</button>
-    </div>
-    <div id="scene1" class="scene">
-      <div class="fromGod">
-        <div class="visionText">This vision brought to you by the letter H.</div>
-        <div class="exit">I Get It Already</div>
+    <h1>Joans Schizophrenic Adventure of <span>Magic</span></h1>
+    <div class="gameWrapper loading">
+      <div class="loader"><div class="loaderInner"></div></div>
+      <div id="main-menu" class="scene active">
+        <div id="start" class="btn btn-huge">Start</div>
       </div>
-      <div class="choices">
-        <div class="choice" id="peasants">
-          <img src="/images/peasant.png">
-          <span class="label">Peasants</span>
+      <div id="scene1" class="scene">
+        <div class="fromGod">
+          <div class="visionText">This vision brought to you by the letter <span>H</span></div>
+          <div class="exit btn">I Get It Already</div>
         </div>
-        <div class="choice" id="pheasants">
-          <img src="/images/pheasant.png">
-          <span class="label">Pheasants</span>
-        </div>
-        <div class="choice" id="nobility">
-          <img src="/images/nobles.png">
-          <span class="label">Nobility</span>
+        <div class="choices">
+          <div class="choice" id="peasants">
+            <img src="/images/peasant.png">
+            <span class="label">Peasants</span>
+          </div>
+          <div class="choice" id="pheasants">
+            <img src="/images/pheasant.png">
+            <span class="label">Pheasants</span>
+          </div>
+          <div class="choice" id="nobility">
+            <img src="/images/nobles.png">
+            <span class="label">Nobility</span>
+          </div>
         </div>
       </div>
+      <div id="scene2" class="scene">
+        <p>SCENE 2 GO</p>
+        <button id="french-maid">french maid outfit</button>
+        <button id="tank-top">tank top & booty shorts</button>
+        <button id="plate-armor">plate armor</button>
+      </div>
+      <div id="end" class="scene">
+        <p id="end-text">YOU WIN</p>
+        <p id="score">0</p>
+      </div>
     </div>
-    <div id="scene2" class="scene">
-      <p>SCENE 2 GO</p>
-      <button id="french-maid">french maid outfit</button>
-      <button id="tank-top">tank top & booty shorts</button>
-      <button id="plate-armor">plate armor</button>
-    </div>
-    <div id="end" class="scene">
-      <p id="end-text">YOU WIN</p>
-      <p id="score">0</p>
-    </div>
-  </div>
   </body>
 </HTML>
