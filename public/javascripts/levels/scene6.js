@@ -9,14 +9,15 @@ $(function(){
     }, 1000);
   }
   $("#husbands").click(function() {
-      loadScene('scene7');
+    fadeInSound('l6a');
+    loadScene('scene7');
   });
   $("#trojan-horse").click(function() {
-      loadScene('scene7');
+    loadScene('scene7');
   });
   $("#ice-cream2").click(function() {
-      scorePoint();
-      loadScene('scene7');
+    scorePoint();
+    loadScene('scene7');
   });
 });
 

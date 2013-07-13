@@ -9,14 +9,15 @@ $(function(){
     }, 1000);
   }
   $("#ice-cream").click(function() {
-      loadScene('scene6');
+    fadeInSound('l5a');
+    loadScene('scene6');
   });
   $("#flogging").click(function() {
-      loadScene('scene6');
+    loadScene('scene6');
   });
   $("#twilight").click(function() {
-      scorePoint();
-      loadScene('scene6');
+    scorePoint();
+    loadScene('scene6');
   });
 });
 

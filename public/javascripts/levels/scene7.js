@@ -9,14 +9,15 @@ $(function(){
     }, 1000);
   }
   $("#ice-cream3").click(function() {
-      loadScene('end');
+    fadeInSound('l7a');
+    loadScene('end');
   });
   $("#education").click(function() {
       scorePoint();
-      loadScene('end');
+    loadScene('end');
   });
   $("#take-nap").click(function() {
-      loadScene('end');
+    loadScene('end');
   });
 });
 

@@ -7,10 +7,10 @@ $(function(){
         $('#scene1').addClass('godHasSpoken').removeClass('godVisible');
       })
     }, 1000);
-
   }
 
   $("#peasants").click(function() {
+    fadeInSound('l1a');
     loadScene('scene2');
   });
   $("#pheasants").click(function() {

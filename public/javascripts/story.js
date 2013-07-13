@@ -124,7 +124,7 @@ story = {
       character: 'general',
       text:'You know, bananas actually grow on plants, not trees.'
     },{
-      character: 'joan'
+      character: 'joan',
       text: 'Is that really so important right now? God, why did you make this man such a nerd?'
     }
   ],
@@ -134,10 +134,10 @@ story = {
       text: 'Ah, the yellow one. Of course. And it’s so nicely paved too!'
     },
     {
-      character: 'general'
+      character: 'general',
       text: 'And even better, I see other travelers already taking this road! A girl, a dog, a lion, a…man made of tin, and…is that a walking scarecrow?'
     },{
-      character: 'joan'
+      character: 'joan',
       text: 'It would seem so. Whatever journey they are on, I’m sure it’s quite magical for them.'
     }
   ],
@@ -236,6 +236,5 @@ story = {
       character: 'joan',
       text: 'Yes, but how much does that really matter with a story like this? They will be duly punished regardless.'
     }
-    
   ]
 }

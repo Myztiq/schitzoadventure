@@ -9,6 +9,7 @@ $(function(){
     }, 1000);
   }
   $("#french-maid").click(function() {
+    fadeInSound('l2a');
     scorePoint();
     loadScene('scene3');
   });

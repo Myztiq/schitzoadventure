@@ -9,8 +9,9 @@ $(function(){
     }, 1000);
   }
   $("#knights").click(function() {
-      scorePoint();
-      loadScene('scene5');
+    fadeInSound('l4a');
+    scorePoint();
+    loadScene('scene5');
   });
   $("#kites").click(function() {
       loadScene('scene5');

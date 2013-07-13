@@ -18,7 +18,7 @@ var loadScene = function(sceneName){
 }
 
 $(function(){
-  var useLoader = false;
+  var useLoader = true;
 
   if(!useLoader){
     $('.loading').removeClass('loading');
@@ -35,9 +35,6 @@ $(function(){
     },
     complete: function(){
       $('.loading').removeClass('loading');
-//      fadeInSound('one',0,1000);
-//      fadeInSound('two',1000,1000);
-//      fadeInSound('three',2000,1000);
     }
   })
 })

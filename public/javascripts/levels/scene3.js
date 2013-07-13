@@ -9,7 +9,8 @@ $(function(){
     }, 1000);
   }
   $("#high-road").click(function() {
-      loadScene('scene4');
+    fadeInSound('l3a');
+    loadScene('scene4');
   });
   $("#low-road").click(function() {
       loadScene('scene4');
