@@ -1,12 +1,12 @@
 (function(){
   var allSounds = {
-    l1a: '/audio/L1_a.ogg',
+    l1a: '/audio/L1_a.wav',
     l2a: '/audio/L2_a.wav',
     l3a: '/audio/L3_a.wav',
-    l4a: '/audio/L4_a.ogg',
-    l5a: '/audio/L5_a.ogg',
-    l6a: '/audio/L6_a.ogg',
-    l7a: '/audio/L7_a.ogg'
+    l4a: '/audio/L4_a.wav',
+    l5a: '/audio/L5_a.wav',
+    l6a: '/audio/L6_a.wav',
+    l7a: '/audio/L7_a.wav'
   }
 
   var soundTracking;
