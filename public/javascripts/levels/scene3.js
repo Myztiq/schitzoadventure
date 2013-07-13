@@ -3,19 +3,18 @@ $(function(){
       godSpoken = false;
       setTimeout(function(){
           $('#dialogueClicker').addClass('scene3Dialogue');
-          $('#currentDialogue').text(story[choice][0].text);
-          $('#currentDialogue').fadeTo(0.5, 1);
+          speak(choice, talkStage);
       }, 1000);
       console.log('scene 3 loaded');
   }
 
     $(document).on('click', ".scene3Dialogue", function() {
         console.log('Dialogue clicked');
-        $('#currentDialogue').fadeTo(0.5, 0);
+        endSpeak()
         talkStage++;
         if (talkStage >= maxTalk) {
             if (!godSpoken) {
-                $('#dialogueClicker').removeClass('dialogueTakeover');
+
                 setTimeout(function(){
                     $('#scene3').addClass('godVisible');
                     $('#scene3 .exit').click(function(){
@@ -32,19 +31,19 @@ $(function(){
             }
         }
         else {
-            $('#currentDialogue').text(story[choice][talkStage].text);
-            $('#currentDialogue').fadeTo(0.5, 1);
+          speak(choice, talkStage);
         }
     });
 
   $("#high-road").click(function() {
+    fadeInSound('l3c');
       postChoice('scene3-high');
       $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene3Dialogue');
-      fadeInSound('l3a');
   });
 
   $("#low-road").click(function() {
+    fadeInSound('l3a');
       scorePoint();
       postChoice('scene3-low');
       $('#currentDialogue').fadeTo(0.5, 1);
@@ -52,6 +51,7 @@ $(function(){
   });
 
   $("#yellowbrick").click(function() {
+    fadeInSound('l3b');
       postChoice('scene3-yellow');
       $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene3Dialogue');

@@ -2,20 +2,18 @@ $(function(){
   sceneSetup['scene7'] = function(){
       godSpoken = false;
       setTimeout(function(){
-          $('#dialogueClicker').addClass('scene7Dialogue');
-          $('#currentDialogue').text(story[choice][0].text);
-          $('#currentDialogue').fadeTo(0.5, 1);
+        $('#dialogueClicker').addClass('scene7Dialogue');
+        speak(choice, talkStage);
       }, 1000);
       console.log('scene 7 loaded');
   }
 
     $(document).on('click', ".scene7Dialogue", function() {
         console.log('Dialogue clicked');
-        $('#currentDialogue').fadeTo(0.5, 0);
+      endSpeak()
         talkStage++;
         if (talkStage >= maxTalk) {
             if (!godSpoken) {
-                $('#dialogueClicker').removeClass('dialogueTakeover');
                 setTimeout(function(){
                     $('#scene7').addClass('godVisible');
                     $('#scene7 .exit').click(function(){
@@ -26,36 +24,32 @@ $(function(){
             }
             else {
                 $('#dialogueClicker').removeClass('scene7Dialogue');
-                $('#dialogueClicker').removeClass('dialogueTakeover');
                 loadScene('end');
             }
         }
         else {
-            story[choice][talkStage].text = story[choice][talkStage].text.replace(/[recruited]/g, recruit);
-            $('#currentDialogue').text(story[choice][talkStage].text);
-            $('#currentDialogue').fadeTo(0.5, 1);
+          speak(choice, talkStage);
         }
     });
 
   $("#ice-cream3").click(function() {
+    fadeInSound('l7b');
       postChoice('scene7-icecream');
       $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene7Dialogue');
-      attack = "ice cream";
-      fadeInSound('l7a');
   });
   $("#education").click(function() {
+    fadeInSound('l7a');
       scorePoint();
       postChoice('scene7-education');
       $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene7Dialogue');
-      attack = "educational"
   });
   $("#take-nap").click(function() {
+    fadeInSound('l7c');
       postChoice('scene7-nap');
       $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene7Dialogue');
-      attack = "naptime";
   });
 });
 
