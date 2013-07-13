@@ -14,6 +14,7 @@
 
   window.loadSounds = function(options){
     soundManager.setup({
+      debugMode: false,
       url: '/swf',
       flashVersion: 9, // optional: shiny features (default = 8)
       onready: function() {
@@ -51,7 +52,7 @@
 
 
     var position = offset % sound.duration;
-    console.log('Duration', sound.duration, 'Offset', offset, 'New Position', position);
+//    console.log('Duration', sound.duration, 'Offset', offset, 'New Position', position);
 
     sound.setPosition(position);
     sound.setVolume(0);
