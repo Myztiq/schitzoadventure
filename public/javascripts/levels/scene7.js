@@ -37,18 +37,20 @@ $(function(){
     });
 
   $("#ice-cream3").click(function() {
+    fadeInSound('l7b');
       postChoice('scene7-icecream');
       $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene7Dialogue');
-      fadeInSound('l7a');
   });
   $("#education").click(function() {
+    fadeInSound('l7a');
       scorePoint();
       postChoice('scene7-education');
       $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene7Dialogue');
   });
   $("#take-nap").click(function() {
+    fadeInSound('l7c');
       postChoice('scene7-nap');
       $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene7Dialogue');

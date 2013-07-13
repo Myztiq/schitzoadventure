@@ -37,19 +37,21 @@ $(function(){
     });
 
   $("#knights").click(function() {
+    fadeInSound('l4a');
       scorePoint();
       postChoice('scene4-knights');
       $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene4Dialogue');
-      fadeInSound('l4a');
   });
 
   $("#kites").click(function() {
+    fadeInSound('l4b');
       postChoice('scene4-kites');
       $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene4Dialogue');
   });
   $("#lights").click(function() {
+    fadeInSound('l4c');
       postChoice('scene4-lights');
       $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene4Dialogue');

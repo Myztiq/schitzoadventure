@@ -37,17 +37,19 @@ $(function(){
     });
 
   $("#ice-cream").click(function() {
+    fadeInSound('l5c');
       postChoice('scene5-icecream');
       $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene5Dialogue');
-      fadeInSound('l5a');
   });
   $("#flogging").click(function() {
+    fadeInSound('l5b');
       postChoice('scene5-flogging');
       $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene5Dialogue');
   });
   $("#twilight").click(function() {
+    fadeInSound('l5a');
       scorePoint();
       postChoice('scene5-twilight');
       $('#currentDialogue').fadeTo(0.5, 1);
