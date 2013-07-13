@@ -5,7 +5,7 @@
   for(var i=0;i<7;i++){
     allSounds['l'+i+'a'] = '/audio/L'+i+'_a.wav'
     allSounds['l'+i+'b'] = '/audio/L'+i+'_b.wav'
-    allSounds['l'+i+'c'] = '/audio/L'+i+'_b.wav'
+    allSounds['l'+i+'c'] = '/audio/L'+i+'_c.wav'
   }
 
   var soundTracking;
