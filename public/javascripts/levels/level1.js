@@ -1,29 +1,24 @@
-Q.scene('level1', function(stage) {
-  stage.insert(new Q.UI.Button({
-    label: 'Option 1',
-    y: 150,
-    x: Q.width / 2,
-    border: 2,
-    fill: 'white'
-  }, function() {
-
-  }));
-  stage.insert(new Q.UI.Button({
-    label: 'Option 2',
-    y: 250,
-    x: Q.width / 2,
-    border: 2,
-    fill: 'white'
-  }, function() {
-
-  }));
-  stage.insert(new Q.UI.Button({
-    label: 'Option 3',
-    y: 350,
-    x: Q.width / 2,
-    border: 2,
-    fill: 'white'
-  }, function() {
-
-  }));
+$(document).ready(function(){
+    $("#peasants").click(function() {
+        $("#level1").hide();
+        $("#score").text(score.toString())
+        $("#end").show();
+    });
+    $("#pheasants").click(function() {
+        $("#level1").hide();
+        score++;
+        $("#score").text(score.toString())
+        $("#end").show();
+    });
+    $("#nobility").click(function() {
+        console.log("nope button done got clicked");
+        $("#level1").hide();
+        $("#score").text(score.toString())
+        $("#end").show();
+    });
+    $("#nope").click(function() {
+        console.log("nope button done got clicked");
+        $("#level1").hide();
+        $("#main-menu").show();
+    });
 });
