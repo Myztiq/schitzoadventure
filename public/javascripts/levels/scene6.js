@@ -38,21 +38,21 @@ $(function(){
     fadeInSound('l6b');
       diplomacy = 'seduction';
       postChoice('scene6-husbands');
-      $('#currentDialogue').fadeTo(0.5, 1);
+
       $('#dialogueClicker').addClass('scene6Dialogue');
   });
   $("#trojan-horse").click(function() {
     fadeInSound('l6c');
       diplomacy = 'trojan horse';
       postChoice('scene6-trojan');
-      $('#currentDialogue').fadeTo(0.5, 1);
+
       $('#dialogueClicker').addClass('scene6Dialogue');
   });
   $("#ice-cream2").click(function() {
       scorePoint();
       diplomacy = 'ice cream';
       postChoice('scene6-icecream');
-      $('#currentDialogue').fadeTo(0.5, 1);
+
       $('#dialogueClicker').addClass('scene6Dialogue');
   });
 });

@@ -40,12 +40,20 @@ var speak = function(choice, talkStage){
   story[choice][talkStage].text = story[choice][talkStage].text.replace(/\[diplomacy\]/g, diplomacy);
   story[choice][talkStage].text = story[choice][talkStage].text.replace(/\[attack\]/g, attack);
   $('#dialogueClicker').addClass('dialogueTakeover');
-  $('#currentDialogue').text(story[choice][talkStage].text);
-  $('#currentDialogue').fadeTo(0.5, 1);
+
+  $('#dialogueContainer').addClass('hide');
+  setTimeout(function(){
+    $('#dialogueContainer').removeClass('joan general narrator');
+    $('#dialogueContainer').addClass(story[choice][talkStage].character);
+    $('#dialogueContainer').removeClass('hide');
+
+    $('#currentDialogue').text(story[choice][talkStage].text);
+  },500);
 }
 
 var endSpeak = function(){
-  $('#currentDialogue').fadeTo(0.5, 0);
+  console.log('Endspeak');
+  $('#dialogueContainer').addClass('hide');
   $('#dialogueClicker').removeClass('dialogueTakeover');
 }
 

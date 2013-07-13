@@ -36,7 +36,7 @@ $(function(){
     fadeInSound('l7b');
       attack = 'ice cream';
       postChoice('scene7-icecream');
-      $('#currentDialogue').fadeTo(0.5, 1);
+
       $('#dialogueClicker').addClass('scene7Dialogue');
   });
   $("#education").click(function() {
@@ -44,14 +44,14 @@ $(function(){
       scorePoint();
       attack = 'educational';
       postChoice('scene7-education');
-      $('#currentDialogue').fadeTo(0.5, 1);
+
       $('#dialogueClicker').addClass('scene7Dialogue');
   });
   $("#take-nap").click(function() {
     fadeInSound('l7c');
       attack = 'naptime';
       postChoice('scene7-nap');
-      $('#currentDialogue').fadeTo(0.5, 1);
+
       $('#dialogueClicker').addClass('scene7Dialogue');
   });
 });
