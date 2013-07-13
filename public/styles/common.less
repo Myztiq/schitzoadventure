@@ -28,7 +28,7 @@ body{
 .gameWrapper{
   position: relative;
   width: 900px;
-  height: 506px;
+  height: 540px;
   margin: auto;
   background-color: #eeffb8;
   box-shadow: inset 0 0 20px @backgroundColor,
@@ -50,6 +50,7 @@ body{
 }
 
 .dialogueTakeover{
+  font-family: CaslonPro, sans-serif;
   opacity: 1;
   top: 0px;
   left: 0px;
@@ -69,7 +70,7 @@ body{
   z-index: 0;
   text-align: center;
   width: 860px;
-  height: 506px;
+  height: 540px;
   top: -200px;
   transition: opacity 1s, top 1s;
   &.active{
@@ -93,6 +94,14 @@ body{
     transition: opacity 1s, top 1s;
     background: url('/images/visionFromGod.png') no-repeat;
     background-size: 100% 100%;
+    .visionText img{
+      z-index: 1;
+      max-height: 400px;
+    }
+    .visionText .exit{
+      z-index: 2;
+      position: relative;
+    }
   }
   &.godHasSpoken{
     .fromGod{
@@ -158,7 +167,7 @@ body{
     }
   }
   .logo{
-    width: 100px;
+    width: 400px;
     display: inline-block;
   }
 

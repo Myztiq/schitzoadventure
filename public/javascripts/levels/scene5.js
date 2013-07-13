@@ -40,6 +40,7 @@ $(function(){
       postChoice('scene5-icecream');
       $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene5Dialogue');
+      fadeInSound('l5a');
   });
   $("#flogging").click(function() {
       postChoice('scene5-flogging');

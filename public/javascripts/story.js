@@ -153,7 +153,7 @@ story = {
       text: 'But wait, there in the sky! Another sign from God! Let’s see who will best serve our troops.'
     }
   ],
-  'scene4-knights':[
+  'scene4-kights':[
     {
       character: 'joan',
       text: 'That sign is surely the insignia of great knights. Dark, brooding knight.'

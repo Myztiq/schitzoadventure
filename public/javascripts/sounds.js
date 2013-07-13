@@ -1,14 +1,20 @@
 (function(){
   var allSounds = {
-    one: '/audio/buildUp.ogg',
-    two: '/audio/loopDark.ogg',
-    three: '/audio/loopLight.ogg'
+    l1a: '/audio/L1_a.ogg',
+    l2a: '/audio/L2_a.wav',
+    l3a: '/audio/L3_a.wav',
+    l4a: '/audio/L4_a.ogg',
+    l5a: '/audio/L5_a.ogg',
+    l6a: '/audio/L6_a.ogg',
+    l7a: '/audio/L7_a.ogg'
   }
+
+  var soundTracking;
 
 
   window.loadSounds = function(options){
-
     soundManager.setup({
+      debugMode: false,
       url: '/swf',
       flashVersion: 9, // optional: shiny features (default = 8)
       onready: function() {
@@ -29,18 +35,29 @@
             id: key,
             url: url,
             autoLoad: true,
-            onload: handleLoaded
+            onload: handleLoaded,
+            loops: 1000
           });
         }
       }
     });
   }
-
-  window.fadeInSound = function(id, position, fadeTime){
+  window.fadeInSound = function(id){
+    if(!soundTracking){
+      soundTracking = new Date()
+    }
+    var fadeTime = 2000;
     var sound = soundManager.getSoundById(id);
+    var offset = new Date() - soundTracking;
+
+
+    var position = offset % sound.duration;
+//    console.log('Duration', sound.duration, 'Offset', offset, 'New Position', position);
+
     sound.setPosition(position);
     sound.setVolume(0);
     sound.play();
+
     var timer = new Date();
 
     var handleFade = function(){

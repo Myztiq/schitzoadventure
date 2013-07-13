@@ -40,6 +40,7 @@ $(function(){
       postChoice('scene6-husbands');
       $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene6Dialogue');
+      fadeInSound('l6a');
   });
   $("#trojan-horse").click(function() {
       postChoice('scene6-trojan');

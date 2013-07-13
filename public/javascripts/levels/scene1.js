@@ -41,6 +41,7 @@ $(function(){
     postChoice('scene1-peasant');
     $('#currentDialogue').fadeTo(0.5, 1);
     $('#dialogueClicker').addClass('scene1Dialogue');
+    fadeInSound('l1a');
   });
   $('#pheasants').click(function() {
     scorePoint();

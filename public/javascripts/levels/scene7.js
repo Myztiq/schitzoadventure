@@ -40,6 +40,7 @@ $(function(){
       postChoice('scene7-icecream');
       $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene7Dialogue');
+      fadeInSound('l7a');
   });
   $("#education").click(function() {
       scorePoint();

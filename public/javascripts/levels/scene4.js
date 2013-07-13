@@ -41,6 +41,7 @@ $(function(){
       postChoice('scene4-knights');
       $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene4Dialogue');
+      fadeInSound('l4a');
   });
 
   $("#kites").click(function() {

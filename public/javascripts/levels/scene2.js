@@ -37,6 +37,7 @@ $(function(){
     });
 
   $("#french-maid").click(function() {
+    fadeInSound('l2a');
     scorePoint();
     postChoice('scene2-maid');
     $('#currentDialogue').fadeTo(0.5, 1);

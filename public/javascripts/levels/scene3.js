@@ -40,6 +40,7 @@ $(function(){
       postChoice('scene3-high');
       $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene3Dialogue');
+      fadeInSound('l3a');
   });
 
   $("#low-road").click(function() {
