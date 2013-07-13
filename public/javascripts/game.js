@@ -4,6 +4,7 @@ var scorePoint = function(amount){
     amount = 1;
   }
   score += amount;
+  console.log(score.toString());
 }
 
 var sceneSetup = {}
