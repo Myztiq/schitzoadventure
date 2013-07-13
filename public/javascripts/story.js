@@ -140,5 +140,102 @@ story = {
       character: 'joan'
       text: 'It would seem so. Whatever journey they are on, I’m sure it’s quite magical for them.'
     }
+  ],
+  'scene4-intro':[
+    {
+      character: 'joan',
+      text: 'Well that road wasn’t too bad. However it seems that our [recruited] could use a little refresher.'
+    },{
+      character: 'general',
+      text: 'Here comes a band of travelers. However, we can’t delay, we must remove the English posthaste!'
+    },{
+      character: 'joan',
+      text: 'But wait, there in the sky! Another sign from God! Let’s see who will best serve our troops.'
+    }
+  ],
+  'scene4-kights':[
+    {
+      character: 'joan',
+      text: 'That sign is surely the insignia of great knights. Dark, brooding knight.'
+    },{
+      character: 'general',
+      text: 'So you think these heroes are the men our troops need right now?'
+    },{
+      character: 'joan',
+      text: 'Perhaps, but they are certainly the heroes we deserve. Rise, dark knights. Join us.'
+    }
+  ],
+  'scene4-kites':[
+    {
+      character: 'joan',
+      text: 'What fanciful contraptions these folk have. And they fly so high in the sky, like the bat in the sign.'
+    },{
+      character: 'general',
+      text: 'Plus, this seems pretty fun, flying these “kites”. I may pick up the hobby once this is over with.'
+    },{
+      character: 'joan',
+      text: 'Until then, let’s use these to our advantage, flying them high above our English foes.'
+    }
+  ],
+  'scene4-lights':[
+    {
+      character: 'joan',
+      text: 'This sign is clearly made by some massively bright torch. Let’s bring the torchbearers along with us.'
+    },{
+      character: 'general',
+      text: 'But Joan, it’s daytime.'
+    },{
+      character: 'joan',
+      text: 'It won’t always be night. We can blind the English by night with these torches!'
+    }
+  ],
+  'scene5-intro':[
+    {
+      character: 'general',
+      text: 'Joan! One of our [recruited] are misbehaving badly. They risk spreading discontent among the rest of the [recruited]!'
+    },{
+      character: 'joan',
+      text: 'I will deal with this. Their punishment must be swift but fair. God, you’ve dealt with this a couple times before. What’s your take?'
+    }
+  ],
+  'scene5-icecream':[
+    {
+      character: 'general',
+      text: 'Ice cream? I know an apple and ice cream are both quite pleasant, but I’m not so sure a treat will quite suffice as punishment.'
+    },{
+      character: 'joan',
+      text: 'Perhaps a normal amount of ice cream would be enjoyable, but I have gallons upon gallons of ice cream for this troublemaker. They will experience brain freeze the likes of which no one has seen!'
+    }
+  ],
+  'scene5-flogging':[
+    {
+      character: 'joan',
+      text: 'We must beat the troublemaker with apples!'
+    },{
+      character: 'general',
+      text: 'Sometimes the direct route is most effective.'
+    },{
+      character: 'joan',
+      text: 'Yes, and better yet, the [recruited] can eat the ones that aren’t too badly bruised.'
+    },{
+      character: 'general',
+      text: 'You mean the apples, right?'
+    },{
+      character: 'joan',
+      text: '…of course…the apples…'
+    }
+  ],
+  'scene5-twilight':[
+    {
+      character: 'joan',
+      text: 'Ah yes, I’ll read them that romance story about vampires and werewolves that my mother enjoyed.'
+    },{
+      character: 'general',
+      text: 'But Joan, didn’t you only just learn how to read and write?'
+    },{
+      character: 'joan',
+      text: 'Yes, but how much does that really matter with a story like this? They will be duly punished regardless.'
+    }
+    
   ]
 }
