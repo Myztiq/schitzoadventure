@@ -18,10 +18,15 @@ var loadScene = function(sceneName){
 }
 
 $(function(){
-  var useLoader = false
+  var useLoader = false;
 
   if(!useLoader){
     $('.loading').removeClass('loading');
+
+//    setTimeout(function(){
+//      loadScene('scene1');
+//    },10);
+
     return;
   }
   loadSounds({
