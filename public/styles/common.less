@@ -49,6 +49,19 @@ body{
   }
 }
 
+.dialogueTakeover{
+  opacity: 1;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  width: 900px;
+  height: 546px;
+  z-index: 1;
+}
+#currentDialogue{
+  opacity: 0;
+}
+
 .scene {
   padding: 20px;
   position: absolute;
@@ -63,6 +76,9 @@ body{
     top: 0px;
     opacity: 1;
     z-index: 1;
+  }
+  .talk{
+    opacity: 0;
   }
   .fromGod{
     opacity: 0;
