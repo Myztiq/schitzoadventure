@@ -356,7 +356,7 @@ story = {
   ],
   'end-failure':[
       {
-          text: 'Unfortunately the [attack] attack did not prove fruitful, and Joan of Arc’s [equipment] [recruited] were defeated in the Battle of Orléans. Joan was forced to retreat, and the English maintained hold of northern France. It seems that, although she saw many visions from God, Joan did not always interpret those visions in quite the right way.'
+          text: 'Unfortunately the [attack] attack did not prove fruitful, and Joan of Arc’s [recruited] with [equipment] were defeated in the Battle of Orléans. Joan was forced to retreat, and the English maintained hold of northern France. It seems that, although she saw many visions from God, Joan did not always interpret those visions in quite the right way.'
       }
   ],
   'end-notes':[
