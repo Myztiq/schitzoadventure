@@ -37,7 +37,6 @@ $(function(){
   $("#high-road").click(function() {
     fadeInSound('l3c');
       postChoice('scene3-high');
-      $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene3Dialogue');
   });
 
@@ -45,14 +44,12 @@ $(function(){
     fadeInSound('l3a');
       scorePoint();
       postChoice('scene3-low');
-      $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene3Dialogue');
   });
 
   $("#yellowbrick").click(function() {
     fadeInSound('l3b');
       postChoice('scene3-yellow');
-      $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene3Dialogue');
   });
 });

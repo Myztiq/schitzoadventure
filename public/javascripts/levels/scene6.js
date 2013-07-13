@@ -37,20 +37,20 @@ $(function(){
   $("#husbands").click(function() {
     fadeInSound('l6b');
       postChoice('scene6-husbands');
-      $('#currentDialogue').fadeTo(0.5, 1);
+
       $('#dialogueClicker').addClass('scene6Dialogue');
   });
   $("#trojan-horse").click(function() {
     fadeInSound('l6c');
       postChoice('scene6-trojan');
-      $('#currentDialogue').fadeTo(0.5, 1);
+
       $('#dialogueClicker').addClass('scene6Dialogue');
   });
   $("#ice-cream2").click(function() {
     fadeInSound('l6a');
       scorePoint();
       postChoice('scene6-icecream');
-      $('#currentDialogue').fadeTo(0.5, 1);
+
       $('#dialogueClicker').addClass('scene6Dialogue');
   });
 });

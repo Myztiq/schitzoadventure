@@ -37,19 +37,16 @@ $(function(){
     fadeInSound('l2a');
     scorePoint();
     postChoice('scene2-maid');
-    $('#currentDialogue').fadeTo(0.5, 1);
     $('#dialogueClicker').addClass('scene2Dialogue');
   });
   $("#tank-top").click(function() {
     fadeInSound('l2c');
     postChoice('scene2-tank');
-    $('#currentDialogue').fadeTo(0.5, 1);
     $('#dialogueClicker').addClass('scene2Dialogue');
   });
   $("#plate-armor").click(function() {
     fadeInSound('l2b');
     postChoice('scene2-plate');
-    $('#currentDialogue').fadeTo(0.5, 1);
     $('#dialogueClicker').addClass('scene2Dialogue');
   });
 });
