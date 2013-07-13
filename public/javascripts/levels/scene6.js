@@ -36,22 +36,20 @@ $(function(){
 
   $("#husbands").click(function() {
     fadeInSound('l6b');
-      postChoice('scene6-husbands');
-
-      $('#dialogueClicker').addClass('scene6Dialogue');
+    postChoice('scene6-husbands');
+    $('#dialogueClicker').addClass('scene6Dialogue');
   });
   $("#trojan-horse").click(function() {
     fadeInSound('l6c');
-      postChoice('scene6-trojan');
-
-      $('#dialogueClicker').addClass('scene6Dialogue');
+    postChoice('scene6-trojan');
+    $('#dialogueClicker').addClass('scene6Dialogue');
   });
   $("#ice-cream2").click(function() {
     fadeInSound('l6a');
-      scorePoint();
-      postChoice('scene6-icecream');
+    scorePoint();
+    postChoice('scene6-icecream');
 
-      $('#dialogueClicker').addClass('scene6Dialogue');
+    $('#dialogueClicker').addClass('scene6Dialogue');
   });
 });
 
