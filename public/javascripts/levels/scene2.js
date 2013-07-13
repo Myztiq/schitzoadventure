@@ -36,18 +36,21 @@ $(function(){
   $("#french-maid").click(function() {
     fadeInSound('l2a');
     scorePoint();
+    equip = 'french maid outfits';
     postChoice('scene2-maid');
     $('#currentDialogue').fadeTo(0.5, 1);
     $('#dialogueClicker').addClass('scene2Dialogue');
   });
   $("#tank-top").click(function() {
     fadeInSound('l2c');
+    equip = 'tank tops and booty shorts';
     postChoice('scene2-tank');
     $('#currentDialogue').fadeTo(0.5, 1);
     $('#dialogueClicker').addClass('scene2Dialogue');
   });
   $("#plate-armor").click(function() {
     fadeInSound('l2b');
+    equip = 'plate armor';
     postChoice('scene2-plate');
     $('#currentDialogue').fadeTo(0.5, 1);
     $('#dialogueClicker').addClass('scene2Dialogue');

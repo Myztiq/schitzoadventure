@@ -35,6 +35,10 @@ var loadScene = function(sceneName){
 }
 
 var speak = function(choice, talkStage){
+  story[choice][talkStage].text = story[choice][talkStage].text.replace(/\[recruited\]/g, recruit);
+  story[choice][talkStage].text = story[choice][talkStage].text.replace(/\[equipment\]/g, equip);
+  story[choice][talkStage].text = story[choice][talkStage].text.replace(/\[diplomacy\]/g, diplomacy);
+  story[choice][talkStage].text = story[choice][talkStage].text.replace(/\[attack\]/g, attack);
   $('#dialogueClicker').addClass('dialogueTakeover');
   $('#currentDialogue').text(story[choice][talkStage].text);
   $('#currentDialogue').fadeTo(0.5, 1);

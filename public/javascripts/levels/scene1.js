@@ -1,8 +1,5 @@
 $(function(){
 
-  var talkStage = 0;
-  const maxTalk = 3;
-
   sceneSetup['scene1'] = function(){
     godSpoken = false;
     $('#dialogueClicker').addClass('scene1Dialogue');
@@ -37,18 +34,24 @@ $(function(){
 
   $('#peasants').click(function() {
     postChoice('scene1-peasant');
+    recruit = 'peasants';
+    $('#currentDialogue').fadeTo(0.5, 1);
     $('#dialogueClicker').addClass('scene1Dialogue');
     fadeInSound('l1b');
   });
   $('#pheasants').click(function() {
     scorePoint();
+    recruit = 'pheasants';
     postChoice('scene1-pheasant');
+    $('#currentDialogue').fadeTo(0.5, 1);
     $('#dialogueClicker').addClass('scene1Dialogue');
     fadeInSound('l1a');
   });
   $('#nobility').click(function() {
     fadeInSound('l1c');
+    recruit = 'nobles';
     postChoice('scene1-nobility');
+    $('#currentDialogue').fadeTo(0.5, 1);
     $('#dialogueClicker').addClass('scene1Dialogue');
   });
 });
