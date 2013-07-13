@@ -4,7 +4,8 @@ $(function(){
   const maxTalk = 2;
 
   sceneSetup['scene1'] = function(){
-    $('#scene1 .dialogue').fadeTo(0.5, 1)
+    $("#scene1 .dialogue #talk0").fadeTo(0.5, 1);
+    console.log("scene loaded");
     //Scene is loading, lets set our timers
     /*setTimeout(function(){
       $('#scene1').addClass('godVisible');
