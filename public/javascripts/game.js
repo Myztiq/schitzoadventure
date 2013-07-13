@@ -16,3 +16,23 @@ var loadScene = function(sceneName){
   $(".scene.active").removeClass('active');
   $('#'+sceneName).addClass('active');
 }
+
+$(function(){
+  var useLoader = false
+
+  if(!useLoader){
+    $('.loading').removeClass('loading');
+    return;
+  }
+  loadSounds({
+    progress: function(percent){
+      $('.loaderInner').css('width',percent+'%')
+    },
+    complete: function(){
+      $('.loading').removeClass('loading');
+//      fadeInSound('one',0,1000);
+//      fadeInSound('two',1000,1000);
+//      fadeInSound('three',2000,1000);
+    }
+  })
+})
