@@ -1,16 +1,25 @@
 $(function(){
   $("#start").click(function() {
-    /*console.log("clicked start button");
+    console.log("clicked start button");
     $('#dialogueClicker').addClass('dialogueTakeover');
-    $('#currentDialogue').text(story['intro'][1]);
-    $('#currentDialogue').fadeTo(0.5, 1);*/
-    loadScene('scene1');
+    $('#dialogueClicker').addClass('introDialogue');
+    $('#currentDialogue').text(story['intro'][0].text);
+    $('#currentDialogue').fadeTo(0.5, 1);
+    $("#start").hide();
+    //loadScene('scene1');
   });
 
-  /*$('.dialogueTakeover').click(function() {
+  /*$(".introDialogue").click(function() {
     console.log('Dialogue clicked');
     $('#currentDialogue').fadeTo(0.5, 0);
+    $('#currentDialogue').removeClass('introDialogue');
     loadScene('scene1');
-    console.log("STILL IN INTRO YOU FOOL")
   });*/
+
+  $(document).on('click', ".introDialogue", function() {
+      console.log('Dialogue clicked');
+      $('#currentDialogue').fadeTo(0.5, 0);
+      $('#dialogueClicker').removeClass('introDialogue');
+      loadScene('scene1');
+  });
 });

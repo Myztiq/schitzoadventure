@@ -1,15 +1,16 @@
 $(function(){
 
   var talkStage = 0;
-  const maxTalk = 2;
+  const maxTalk = 3;
 
   sceneSetup['scene1'] = function(){
-    $('#currentDialogue').text(story.scene1-intro.text;
+    $('#dialogueClicker').addClass('scene1Dialogue');
+    $('#currentDialogue').text(story['scene1-intro'][0].text);
     $('#currentDialogue').fadeTo(0.5, 1);
     console.log('scene loaded');
   }
 
-  $('.dialogueTakeover').click(function() {
+  $(document).on('click', ".scene1Dialogue", function() {
       console.log('Dialogue clicked');
       $('#currentDialogue').fadeTo(0.5, 0);
       talkStage++;
@@ -19,11 +20,13 @@ $(function(){
               $('#scene1').addClass('godVisible');
               $('#scene1 .exit').click(function(){
                   $('#scene1').addClass('godHasSpoken').removeClass('godVisible');
+                  //$('#dialogueClicker').addClass('dialogueTakeover');
+                  $('#dialogueClicker').removeClass('scene1Dialogue');
               })
-              $('#dialogueClicker').addClass('dialogueTakeover');
           }, 1000);
       }
       else {
+        $('#currentDialogue').text(story['scene1-intro'][talkStage].text);
         $('#currentDialogue').fadeTo(0.5, 1);
       }
   });
