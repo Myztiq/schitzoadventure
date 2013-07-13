@@ -17,8 +17,7 @@ var postChoice = function(branch) {
     maxTalk = story[branch].length;
     godSpoken = true;
     choice = branch;
-    $('#dialogueClicker').addClass('dialogueTakeover');
-    $('#currentDialogue').text(story[branch][talkStage].text);
+    speak(branch, talkStage)
 }
 
 var sceneSetup = {}
@@ -29,6 +28,17 @@ var loadScene = function(sceneName){
   }
   $(".scene.active").removeClass('active');
   $('#'+sceneName).addClass('active');
+}
+
+var speak = function(choice, talkStage){
+  $('#dialogueClicker').addClass('dialogueTakeover');
+  $('#currentDialogue').text(story[choice][talkStage].text);
+  $('#currentDialogue').fadeTo(0.5, 1);
+}
+
+var endSpeak = function(){
+  $('#currentDialogue').fadeTo(0.5, 0);
+  $('#dialogueClicker').removeClass('dialogueTakeover');
 }
 
 $(function(){

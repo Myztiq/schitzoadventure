@@ -1,21 +1,18 @@
 $(function(){
   sceneSetup['scene4'] = function(){
       godSpoken = false;
-      setTimeout(function(){
-          $('#dialogueClicker').addClass('scene4Dialogue');
-          $('#currentDialogue').text(story[choice][0].text);
-          $('#currentDialogue').fadeTo(0.5, 1);
-      }, 1000);
+      $('#dialogueClicker').addClass('scene4Dialogue');
+      speak(choice, talkStage);
       console.log('scene 4 loaded');
   }
 
     $(document).on('click', ".scene4Dialogue", function() {
         console.log('Dialogue clicked');
-        $('#currentDialogue').fadeTo(0.5, 0);
+        endSpeak()
         talkStage++;
         if (talkStage >= maxTalk) {
             if (!godSpoken) {
-                $('#dialogueClicker').removeClass('dialogueTakeover');
+
                 setTimeout(function(){
                     $('#scene4').addClass('godVisible');
                     $('#scene4 .exit').click(function(){
@@ -31,8 +28,7 @@ $(function(){
             }
         }
         else {
-            $('#currentDialogue').text(story[choice][talkStage].text);
-            $('#currentDialogue').fadeTo(0.5, 1);
+          speak(choice, talkStage);
         }
     });
 
@@ -40,20 +36,17 @@ $(function(){
     fadeInSound('l4a');
       scorePoint();
       postChoice('scene4-knights');
-      $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene4Dialogue');
   });
 
   $("#kites").click(function() {
     fadeInSound('l4b');
       postChoice('scene4-kites');
-      $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene4Dialogue');
   });
   $("#lights").click(function() {
     fadeInSound('l4c');
       postChoice('scene4-lights');
-      $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene4Dialogue');
   });
 });

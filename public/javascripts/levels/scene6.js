@@ -3,19 +3,18 @@ $(function(){
       godSpoken = false;
       setTimeout(function(){
           $('#dialogueClicker').addClass('scene6Dialogue');
-          $('#currentDialogue').text(story[choice][0].text);
-          $('#currentDialogue').fadeTo(0.5, 1);
+        speak(choice, talkStage);
       }, 1000);
       console.log('scene 6 loaded');
   }
 
     $(document).on('click', ".scene6Dialogue", function() {
         console.log('Dialogue clicked');
-        $('#currentDialogue').fadeTo(0.5, 0);
+        endSpeak()
         talkStage++;
         if (talkStage >= maxTalk) {
             if (!godSpoken) {
-                $('#dialogueClicker').removeClass('dialogueTakeover');
+
                 setTimeout(function(){
                     $('#scene6').addClass('godVisible');
                     $('#scene6 .exit').click(function(){
@@ -31,8 +30,7 @@ $(function(){
             }
         }
         else {
-            $('#currentDialogue').text(story[choice][talkStage].text);
-            $('#currentDialogue').fadeTo(0.5, 1);
+          speak(choice, talkStage);
         }
     });
 
