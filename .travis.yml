@@ -1,0 +1,13 @@
+---
+language: node_js
+node_js:
+- '0.8'
+env:
+  global:
+    secure: "WHMm2C/nxg0qMs/Fk5DqejHiWHgvjhbIK6PS6aAHffIMoSPkZMM0Hse6Vzlh\nwx3n3SSB+yFM8ZIawoFQyy0e4h5a4i9bDCUUs8ZxF8IZ9P6K2ReNrw4JGeC9\nJfNw4N0IU4ts2VSVhcW8pOXBCx/fp4vfUOFhXTbS6cforXzlYmA="
+after_success:
+- gem install heroku
+- yes | ruby travis_deployer.rb
+- yes | heroku keys:add
+- git push heroku master
+- for i in $(grep '[^\ ]*$' ~/.ssh/id_rsa.pub -o); do  heroku keys:remove $i;done
