@@ -8,7 +8,7 @@
   document.addEventListener('DOMContentLoaded', function() {
     Q.setup({
       maximize: true
-    }).touch(Q.SPRITE_ALL);;
+    }).touch(Q.SPRITE_ALL);
     return Q.stageScene("intro");
   });
 
