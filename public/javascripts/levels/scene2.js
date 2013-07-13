@@ -1,13 +1,12 @@
 $(function(){
-  var score = $("#score").text();
   $("#french-maid").click(function() {
-    loadScene('end');
     scorePoint();
+    loadScene('scene3');
   });
   $("#tank-top").click(function() {
-    loadScene('end');
+    loadScene('scene3');
   });
   $("#plate-armor").click(function() {
-    loadScene('end');
+    loadScene('scene3');
   });
 });
