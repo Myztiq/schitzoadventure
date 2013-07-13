@@ -1,5 +1,8 @@
 $(function(){
 
+  var talkStage = 0;
+  const maxTalk = 3;
+
   sceneSetup['scene1'] = function(){
     godSpoken = false;
     setTimeout(function(){
