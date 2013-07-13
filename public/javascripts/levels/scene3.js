@@ -26,6 +26,7 @@ $(function(){
             }
             else {
                 $('#dialogueClicker').removeClass('scene3Dialogue');
+                story['scene4-intro'][0].text = story['scene4-intro'][0].text.replace(/[recruited]/g, recruit);
                 postChoice('scene4-intro');
                 loadScene('scene4');
             }

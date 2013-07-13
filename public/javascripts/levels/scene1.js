@@ -30,6 +30,7 @@ $(function(){
           }
           else {
             $('#dialogueClicker').removeClass('scene1Dialogue');
+            story['scene2-intro'][0].text = story['scene2-intro'][0].text.replace(/[recruited]/g, recruit);
             postChoice('scene2-intro');
             loadScene('scene2');
           }
@@ -45,16 +46,19 @@ $(function(){
     $('#currentDialogue').fadeTo(0.5, 1);
     $('#dialogueClicker').addClass('scene1Dialogue');
     fadeInSound('l1a');
+    recruit = peasants;
   });
   $('#pheasants').click(function() {
     scorePoint();
     postChoice('scene1-pheasant');
     $('#currentDialogue').fadeTo(0.5, 1);
     $('#dialogueClicker').addClass('scene1Dialogue');
+      recruit = 'pheasants';
   });
   $('#nobility').click(function() {
     postChoice('scene1-nobility');
     $('#currentDialogue').fadeTo(0.5, 1);
     $('#dialogueClicker').addClass('scene1Dialogue');
+      recruit = 'nobles';
   });
 });

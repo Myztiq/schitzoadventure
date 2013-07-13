@@ -3,6 +3,10 @@ var talkStage = 0;
 var maxTalk = 3;
 var godSpoken = false;
 var choice;
+var recruit;
+var equip;
+var diplomacy;
+var attack;
 
 var scorePoint = function(amount){
   if(!amount){

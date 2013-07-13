@@ -31,6 +31,7 @@ $(function(){
             }
         }
         else {
+            story[choice][talkStage].text = story[choice][talkStage].text.replace(/[recruited]/g, recruit);
             $('#currentDialogue').text(story[choice][talkStage].text);
             $('#currentDialogue').fadeTo(0.5, 1);
         }
@@ -40,6 +41,7 @@ $(function(){
       postChoice('scene7-icecream');
       $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene7Dialogue');
+      attack = "ice cream";
       fadeInSound('l7a');
   });
   $("#education").click(function() {
@@ -47,11 +49,13 @@ $(function(){
       postChoice('scene7-education');
       $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene7Dialogue');
+      attack = "educational"
   });
   $("#take-nap").click(function() {
       postChoice('scene7-nap');
       $('#currentDialogue').fadeTo(0.5, 1);
       $('#dialogueClicker').addClass('scene7Dialogue');
+      attack = "naptime";
   });
 });
 

@@ -31,6 +31,7 @@ $(function(){
             }
         }
         else {
+            story[choice][talkStage].text = story[choice][talkStage].text.replace(/[recruited]/g, recruit);
             $('#currentDialogue').text(story[choice][talkStage].text);
             $('#currentDialogue').fadeTo(0.5, 1);
         }
