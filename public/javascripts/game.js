@@ -17,6 +17,12 @@ var loadScene = function(sceneName){
 }
 
 $(function(){
+  var useLoader = false
+
+  if(!useLoader){
+    $('.loading').removeClass('loading');
+    return;
+  }
   loadSounds({
     progress: function(percent){
       $('.loaderInner').css('width',percent+'%')
