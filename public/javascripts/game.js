@@ -1,10 +1,24 @@
 var score = 0;
+var talkStage = 0;
+var maxTalk = 3;
+var godSpoken = false;
+var choice;
+
 var scorePoint = function(amount){
   if(!amount){
     amount = 1;
   }
   score += amount;
   console.log(score.toString());
+}
+
+var postChoice = function(branch) {
+    talkStage = 0;
+    maxTalk = story[branch].length;
+    godSpoken = true;
+    choice = branch;
+    $('#dialogueClicker').addClass('dialogueTakeover');
+    $('#currentDialogue').text(story[branch][talkStage].text);
 }
 
 var sceneSetup = {}

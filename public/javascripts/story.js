@@ -153,7 +153,7 @@ story = {
       text: 'But wait, there in the sky! Another sign from God! Let’s see who will best serve our troops.'
     }
   ],
-  'scene4-kights':[
+  'scene4-knights':[
     {
       character: 'joan',
       text: 'That sign is surely the insignia of great knights. Dark, brooding knight.'
@@ -237,5 +237,131 @@ story = {
       text: 'Yes, but how much does that really matter with a story like this? They will be duly punished regardless.'
     }
     
+  ],
+  'scene6-intro':[
+      {
+          character: 'general',
+          text: 'We are nearly to Orléans. We will face the English very soon.'
+      },{
+          character: 'joan',
+          text: 'Perhaps, before battle we can attempt a little diplomacy. It’s best to give our foes one last chance before we attack. God, how can we possibly avoid direct conflict?'
+      }
+  ],
+  'scene6-husbands':[
+      {
+          character: 'joan',
+          text: 'A child? Family! We can appeal to the men of England and seduce them away from battle.'
+      },{
+          character: 'general',
+          text: 'Are the men of England attracted toward [recruited] who wear [equipment]?'
+      }, {
+          character: 'joan',
+          text: 'We can only hope so.'
+      }
+  ],
+  'scene6-trojan':[
+      {
+          character: 'joan',
+          text: 'Perhaps we can pull a bit of a trick in our diplomacy…'
+      },{
+          character: 'general',
+          text: 'How so?'
+      },{
+          character: 'joan',
+          text: 'Well, as a small child is sneaky at times, we can sneak in and appeal to them for peace while actually sabotaging their forces.'
+      },{
+          character: 'general',
+          text: 'Didn’t that already happen in ancient Troy?'
+      },{
+          character: 'joan',
+          text: 'And do you know any Tojans today? I rest my case.'
+      }
+  ],
+  'scene6-icecream':[
+      {
+          character: 'joan',
+          text: 'Well we still have all of this ice cream. Your children love ice cream, right?'
+      },{
+          character: 'general',
+          text: 'Well, I have no children of my own, but I’d assume so.'
+      },{
+          character: 'joan',
+          text: 'Then we shall try to sweeten up the English.'
+      }
+  ],
+  'scene7-intro':[
+      {
+          character: 'joan',
+          text: 'Well it seems the [diplomacy] ploy didn’t work for us.'
+      },{
+          character: 'general',
+          text: 'Battle is at hand. We must launch our attack on the English if we hope to remove them from Orléans.'
+      },{
+          character: 'joan',
+          text: 'Indeed, they have been in our country for too long now. God, this is our moment of truth. How shall we remove the English from France?'
+      }
+  ],
+  'scene7-icecream':[
+      {
+          character: 'joan',
+          text: 'Jeez, how much ice cream do we have!?'
+      },{
+          character: 'general',
+          text: 'We could simply load up the rest into our catapults.'
+      },{
+          character: 'joan',
+          text: 'But God has given us a symbol of the law. Perhaps our ice cream can put the freeze on England’s injustices?'
+      },{
+          character: 'general',
+          text: 'Then it’s settled. We will launch the ice cream catapults immediately.'
+      }
+  ],
+  'scene7-education':[
+      {
+          character: 'joan',
+          text: 'Our English foes need to learn the error of their ways.'
+      },{
+          character: 'general',
+          text: 'Are you proposing we teach them a lesson?'
+      },{
+          character: 'joan',
+          text: 'Yes. Let’s really throw the book at them.'
+      }
+  ],
+  'scene7-nap':[
+      {
+          character: 'joan',
+          text: 'Perhaps this vision is an opposite.'
+      },{
+          character: 'general',
+          text: 'I’m sorry, but I don’t quite follow.'
+      },{
+          character: 'joan',
+          text: 'Well, if the law never sleeps, then we should sleep.'
+      },{
+          character: 'general',
+          text: 'Take an army-wide nap?'
+      },{
+          character: 'joan',
+          text: 'Precisely. Let God work it out.'
+      },{
+          character: 'general',
+          text: 'I’ll tuck in the [recruited] immediately.'
+      }
+  ],
+  'end-success':[
+      {
+         text: 'Joan of Arc’s plan somehow worked. In the Battle of Orléans, she led her troops of [recruited] into battle with a vicious [attack] attack. Clad in [equipment], Joan’s forces managed to overcome unthinkable odds and break the British siege on Orléans. This victory was all made possible by Joan’s astute understanding of the signs and visions sent to her by God.'
+      }
+  ],
+  'end-failure':[
+      {
+          text: 'Unfortunately the [attack] attack did not prove fruitful, and Joan of Arc’s [equipment] [recruited] were defeated in the Battle of Orléans. Joan was forced to retreat, and the English maintained hold of northern France. It seems that, although she saw many visions from God, Joan did not always interpret those visions in quite the right way.'
+      }
+  ],
+  'end-notes':[
+      {
+         text: 'In reality, Joan of Arc did, in fact, lead the French troops to victory in the Battle of Orléans. This victory broke a 6 month long siege in only 9 days. Many consider this victory the turning point in the Hundred’s Year War, and Joan of Arc has always been remembered for her leadership in this and other battles. For more information on Joan of Arc, check out <a href="http://www.biography.com/people/joan-of-arc-9354756" target="_blank">her summarized biography</a>, and for more information on the Battle of Orléans, check out <a href="http://www.jeanne-darc.info/p_war/0_battles/orleans.html" target="_blank">this account of the entire siege.</a>'
+      }
   ]
 }

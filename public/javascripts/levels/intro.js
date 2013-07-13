@@ -20,6 +20,7 @@ $(function(){
       console.log('Dialogue clicked');
       $('#currentDialogue').fadeTo(0.5, 0);
       $('#dialogueClicker').removeClass('introDialogue');
+      postChoice('scene1-intro');
       loadScene('scene1');
   });
 });

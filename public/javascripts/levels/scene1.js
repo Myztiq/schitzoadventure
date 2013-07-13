@@ -1,13 +1,13 @@
 $(function(){
 
-  var talkStage = 0;
-  const maxTalk = 3;
-
   sceneSetup['scene1'] = function(){
-    $('#dialogueClicker').addClass('scene1Dialogue');
-    $('#currentDialogue').text(story['scene1-intro'][0].text);
-    $('#currentDialogue').fadeTo(0.5, 1);
-    console.log('scene loaded');
+    godSpoken = false;
+    setTimeout(function(){
+        $('#dialogueClicker').addClass('scene1Dialogue');
+        $('#currentDialogue').text(story[choice][0].text);
+        $('#currentDialogue').fadeTo(0.5, 1);
+    }, 1000);
+    console.log('scene 1 loaded');
   }
 
   $(document).on('click', ".scene1Dialogue", function() {
@@ -15,30 +15,42 @@ $(function(){
       $('#currentDialogue').fadeTo(0.5, 0);
       talkStage++;
       if (talkStage >= maxTalk) {
-          $('#dialogueClicker').removeClass('dialogueTakeover');
-          setTimeout(function(){
-              $('#scene1').addClass('godVisible');
-              $('#scene1 .exit').click(function(){
-                  $('#scene1').addClass('godHasSpoken').removeClass('godVisible');
-                  //$('#dialogueClicker').addClass('dialogueTakeover');
-                  $('#dialogueClicker').removeClass('scene1Dialogue');
-              })
-          }, 1000);
+          if (!godSpoken) {
+              $('#dialogueClicker').removeClass('dialogueTakeover');
+              setTimeout(function(){
+                  $('#scene1').addClass('godVisible');
+                  $('#scene1 .exit').click(function(){
+                      $('#scene1').addClass('godHasSpoken').removeClass('godVisible');
+                      $('#dialogueClicker').removeClass('scene1Dialogue');
+                  })
+              }, 1000);
+          }
+          else {
+            $('#dialogueClicker').removeClass('scene1Dialogue');
+            postChoice('scene2-intro');
+            loadScene('scene2');
+          }
       }
       else {
-        $('#currentDialogue').text(story['scene1-intro'][talkStage].text);
+        $('#currentDialogue').text(story[choice][talkStage].text);
         $('#currentDialogue').fadeTo(0.5, 1);
       }
   });
 
   $('#peasants').click(function() {
-    loadScene('scene2');
+    postChoice('scene1-peasant');
+    $('#currentDialogue').fadeTo(0.5, 1);
+    $('#dialogueClicker').addClass('scene1Dialogue');
   });
   $('#pheasants').click(function() {
-    loadScene('scene2');
     scorePoint();
+    postChoice('scene1-pheasant');
+    $('#currentDialogue').fadeTo(0.5, 1);
+    $('#dialogueClicker').addClass('scene1Dialogue');
   });
   $('#nobility').click(function() {
-    loadScene('scene2');
+    postChoice('scene1-nobility');
+    $('#currentDialogue').fadeTo(0.5, 1);
+    $('#dialogueClicker').addClass('scene1Dialogue');
   });
 });
