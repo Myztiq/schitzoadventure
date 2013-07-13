@@ -1,8 +1,8 @@
 (function(){
   var allSounds = {
     l1a: '/audio/L1_a.ogg',
-    l2a: '/audio/L2_a.ogg',
-    l3a: '/audio/L3_a.ogg',
+    l2a: '/audio/L2_a.wav',
+    l3a: '/audio/L3_a.wav',
     l4a: '/audio/L4_a.ogg',
     l5a: '/audio/L5_a.ogg',
     l6a: '/audio/L6_a.ogg',
