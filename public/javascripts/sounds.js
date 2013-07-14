@@ -1,6 +1,11 @@
 (function(){
 
-  var allSounds = {}
+  var allSounds = {
+    'amb1': '/audio/amb1.ogg',
+    'amb2': '/audio/amb2.ogg',
+    'amb3': '/audio/amb3.ogg',
+    'amb4': '/audio/amb4.ogg'
+  }
 
   for(var i=1;i<=7;i++){
     allSounds['l'+i+'a'] = '/audio/L'+i+'_a.wav'
@@ -27,6 +32,10 @@
           options.progress((keys.length-counter)/keys.length * 100);
           if(counter == 0){
             options.complete();
+            soundManager.getSoundById('amb1').play();
+            soundManager.getSoundById('amb2').play();
+            soundManager.getSoundById('amb3').play();
+            soundManager.getSoundById('amb4').play();
           }
         }
 
