@@ -2,19 +2,19 @@ story = {
   'intro': [
     {
       character: 'narrator',
-      text: 'Joan of Arc was known to have visions from God during her lifetime. You will seek God’s guidance as you make choices in preparation for the Battle of Orléans. However, God’s signs may not always be direct and clear as to what choice may be most beneficial to you and your troops. Think creatively and sort out exactly what God may be pointing you towards.'
+      text: 'Joan of Arc was believed to have visions from God during her lifetime. You will seek God’s guidance as you make choices in preparation for the Battle of Orléans. However, God’s signs may not always be direct and clear (divine knowledge being what it is) as to what choice may be most beneficial to you and your troops. Think creatively and sort out exactly what God may be pointing you towards.'
     }
   ],
   'scene1-intro':[
     {
       character: 'joan',
-      text: 'The English have been in our lands far too long. Must the King be driven from his kingdom?'
+      text: 'The English have been in our lands far too long. Must we be driven from our homes?'
     },{
       character: 'general',
       text: 'Certainly mademoiselle, we must drive the English out of France! First, we must grow our numbers and recruit more soldiers.'
     },{
       character: 'joan',
-      text: 'Yes. I see right over here that we have several candidates for a fine army. God will surely guide use to making the best choice. God, please…give me a sign!'
+      text: 'Yes. I see right over here that we have several candidates for a fine army. God will surely guide us to make the best choice. God, please…give me a sign!'
     }
   ],
   'scene1-peasant':[
@@ -35,10 +35,10 @@ story = {
       text: 'Pardon, do you mean the birds?'
     },{
       character: 'joan',
-      text: 'Yes! Pheasants are the only word with an “h”. The English will never suspect an army of birds!'
+      text: 'Yes! Pheasants is the only word with an “h”. The English will never suspect an army of birds!'
     },{
       character:'general',
-      text: 'Pheasants it is then. At least if one dies we can feed the other men…'
+      text: 'Pheasants it is then. At least if one dies we can feed the other soldiers…'
     }
   ],
   'scene1-nobility':[
@@ -59,13 +59,13 @@ story = {
       text: 'The [recruited] are assembled. However, we have not given them any armor yet.'
     },{
       character: 'joan',
-      text: 'Well let’s see what we have available here. It seems there are a couple outfits in this convenient cabinet. God, what clothes will be equip our troops?'
+      text: 'Well let’s see what we have available here. It seems there are a couple outfits in this convenient cabinet. God, what clothes will best equip our troops?'
     }
   ],
   'scene2-maid':[
     {
       character: 'joan',
-      text: 'God, you sure work in mysterious ways. What a metallic disc could possibly have to do with these admittedly overly small outfits is beyond me.'
+      text: '...God, you sure work in mysterious ways. What a metallic disc could possibly have to do with these overly small outfits is beyond me.'
     },{
       character: 'general',
       text: 'There could be a certain appeal to these I suppose.'
@@ -95,14 +95,17 @@ story = {
   'scene3-intro':[
     {
       character:'general',
-      text: 'Joan, the [recruited] are now outfitted in their [equipment]. I have to admit, it was a bit of an odd process getting it on them…'
+      text: 'Joan, the [recruited] are now outfitted in their [equipment]. I have to admit, it was a bit of an odd process getting each of them fitted…'
     },{
       character: 'joan',
       text: 'We are living in odd times. This army is unprecedented, but I have a good feeling about them.'
     },{
       character:'general',
-      text: 'Indeed. It seems we have hit a fork in the road. Which way shall we go?'
-    }
+      text: 'Indeed. However, it seems we have hit a fork in the road. Which way shall we go?'
+    }, {
+          character: 'joan',
+          text: 'God, got any hints for me?'
+      }
   ],
   'scene3-low':[
     {
@@ -138,7 +141,7 @@ story = {
       text: 'And even better, I see other travelers already taking this road! A girl, a dog, a lion, a…man made of tin, and…is that a walking scarecrow?'
     },{
       character: 'joan',
-      text: 'It would seem so. Whatever journey they are on, I’m sure it’s quite magical for them.'
+      text: 'It would seem so. Whatever journey they are on, I’m sure it’s quite magical.'
     }
   ],
   'scene4-intro':[
@@ -156,13 +159,13 @@ story = {
   'scene4-knights':[
     {
       character: 'joan',
-      text: 'That sign is surely the insignia of great knights. Dark, brooding knight.'
+      text: 'That sign is surely the insignia of great knights. Dark, brooding knights.'
     },{
       character: 'general',
-      text: 'So you think these heroes are the men our troops need right now?'
+      text: 'So you think these men are the heroes we deserve?'
     },{
       character: 'joan',
-      text: 'Perhaps, but they are certainly the heroes we deserve. Rise, dark knights. Join us.'
+      text: 'Perhaps, but they are certainly the heroes we need right now. Rise, dark knights. Join us.'
     }
   ],
   'scene4-kites':[
@@ -171,7 +174,7 @@ story = {
       text: 'What fanciful contraptions these folk have. And they fly so high in the sky, like the bat in the sign.'
     },{
       character: 'general',
-      text: 'Plus, this seems pretty fun, flying these “kites”. I may pick up the hobby once this is over with.'
+      text: 'Plus, flying these "kites" seems pretty fun. I may pick up the hobby once this is over with.'
     },{
       character: 'joan',
       text: 'Until then, let’s use these to our advantage, flying them high above our English foes.'
@@ -192,7 +195,7 @@ story = {
   'scene5-intro':[
     {
       character: 'general',
-      text: 'Joan! One of our [recruited] are misbehaving badly. They risk spreading discontent among the rest of the [recruited]!'
+      text: 'Joan! One of our [recruited] is misbehaving badly. They risk spreading discontent among the rest of the [recruited]!'
     },{
       character: 'joan',
       text: 'I will deal with this. Their punishment must be swift but fair. God, you’ve dealt with this a couple times before. What’s your take?'
@@ -244,7 +247,7 @@ story = {
           text: 'We are nearly to Orléans. We will face the English very soon.'
       },{
           character: 'joan',
-          text: 'Perhaps, before battle we can attempt a little diplomacy. It’s best to give our foes one last chance before we attack. God, how can we possibly avoid direct conflict?'
+          text: 'Perhaps we can attempt a little diplomacy before battle. It’s best to give our foes one last chance before we attack. God, how can we possibly avoid direct conflict?'
       }
   ],
   'scene6-husbands':[
@@ -253,7 +256,7 @@ story = {
           text: 'A child? Family! We can appeal to the men of England and seduce them away from battle.'
       },{
           character: 'general',
-          text: 'Are the men of England attracted toward [recruited] who wear [equipment]?'
+          text: 'Are the men of England attracted to [recruited] who wear [equipment]?'
       }, {
           character: 'joan',
           text: 'We can only hope so.'
@@ -262,7 +265,7 @@ story = {
   'scene6-trojan':[
       {
           character: 'joan',
-          text: 'Perhaps we can pull a bit of a trick in our diplomacy…'
+          text: 'Perhaps we can use diplomacy as cover for a ruse…'
       },{
           character: 'general',
           text: 'How so?'
@@ -280,7 +283,7 @@ story = {
   'scene6-icecream':[
       {
           character: 'joan',
-          text: 'Well we still have all of this ice cream. Your children love ice cream, right?'
+          text: 'Well, we have all of this ice cream. Your children love ice cream, right?'
       },{
           character: 'general',
           text: 'Well, I have no children of my own, but I’d assume so.'
@@ -304,10 +307,10 @@ story = {
   'scene7-icecream':[
       {
           character: 'joan',
-          text: 'Jeez, how much ice cream do we have!?'
+          text: 'How much ice cream do we have!?'
       },{
           character: 'general',
-          text: 'We could simply load up the rest into our catapults.'
+          text: 'Enough to load into our catapults.'
       },{
           character: 'joan',
           text: 'But God has given us a symbol of the law. Perhaps our ice cream can put the freeze on England’s injustices?'
@@ -331,7 +334,7 @@ story = {
   'scene7-nap':[
       {
           character: 'joan',
-          text: 'Perhaps this vision is an opposite.'
+          text: 'Perhaps we must do the opposite of this vision.'
       },{
           character: 'general',
           text: 'I’m sorry, but I don’t quite follow.'
