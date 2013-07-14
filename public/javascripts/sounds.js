@@ -28,17 +28,17 @@
   }
 
   var levels = {
-    'l1b': .4,
-    'l2b': .4,
-    'l3b': .4,
-    'l4b': .4,
-    'l5b': .4,
-    'l6b': .4,
-    'l7b': .4,
-    'amb1': .8,
-    'amb2': .8,
-    'amb3': .8,
-    'amb4': .8
+    'l1b': 40,
+    'l2b': 40,
+    'l3b': 40,
+    'l4b': 40,
+    'l5b': 40,
+    'l6b': 40,
+    'l7b': 40,
+    'amb1': 80,
+    'amb2': 80,
+    'amb3': 80,
+    'amb4': 80
   }
 
   var soundTimers = {}
@@ -57,10 +57,10 @@
           options.progress((keys.length - counter) / keys.length * 100);
           if (counter == 0) {
             options.complete();
-            soundManager.getSoundById('amb1').play();
-            soundManager.getSoundById('amb2').play();
-            soundManager.getSoundById('amb3').play();
-            soundManager.getSoundById('amb4').play();
+            soundManager.getSoundById('amb1').setVolume(levels['amb1']).play({loops: 1000});
+            soundManager.getSoundById('amb2').setVolume(levels['amb2']).play({loops: 1000});
+            soundManager.getSoundById('amb3').setVolume(levels['amb3']).play({loops: 1000});
+            soundManager.getSoundById('amb4').setVolume(levels['amb4']).play({loops: 1000});
           }
         }
 
@@ -72,7 +72,7 @@
             url: url,
             autoLoad: true,
             onload: handleLoaded,
-            loops: 1000
+            loops: 1
           });
         }
       }
@@ -82,16 +82,18 @@
   window.playSound = function (id) {
     console.log('Playind sound: ',id);
     var sound = soundManager.getSoundById(id);
-    var volume = 1;
+    var volume = 100;
     if(levels[id]){
       volume = levels[id];
     }
 
+    console.log(sound);
     sound.setVolume(volume);
     if(sound.playState != 1){
       soundTimers[id] = new Date()-30;
     }
     if((new Date()-soundTimers[id]) > 20){
+      sound.setPosition(0);
       sound.play({loops: 1});
       soundTimers[id] = new Date();
     }
@@ -141,7 +143,7 @@
 
     sound.setPosition(position);
     sound.setVolume(0);
-    sound.play();
+    sound.play({loops: 1000});
 
     var targetLevel = .5;
     if (levels[id]) {
