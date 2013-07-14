@@ -110,6 +110,7 @@ body{
   &.godVisible{
     .choices{
       -webkit-filter: blur(3px);
+      filter: blur(3px);
     }
     .fromGod{
       opacity: 1;
@@ -132,6 +133,9 @@ body{
   &:hover{
     img{
       -webkit-filter: drop-shadow(0px 0px 20px #79835B);
+      -webkit-animation: wiggle 1s infinite alternate linear;
+      filter: drop-shadow(0px 0px 20px #79835B);
+      animation: wiggle 1s infinite alternate linear;
     }
     .label{
       opacity: 1;
@@ -174,13 +178,25 @@ body{
 }
 
 @-webkit-keyframes wiggle{
+   0% {
+     -webkit-transform: rotate(10deg) scale(1);
+   }
+   50%{
+     -webkit-transform: scale(.8);
+   }
+   100% {
+     -webkit-transform: rotate(-10deg) scale(1);
+   }
+ }
+
+@keyframes wiggle{
   0% {
-    -webkit-transform: rotate(10deg) scale(1);
+    transform: rotate(10deg) scale(1);
   }
   50%{
-    -webkit-transform: scale(.8);
+    transform: scale(.8);
   }
   100% {
-    -webkit-transform: rotate(-10deg) scale(1);
+    transform: rotate(-10deg) scale(1);
   }
 }
