@@ -16,4 +16,15 @@ $(function () {
     $("#score").text("Final Score: " + score);
     $("#endNote").html('<p id="endNote">' + story['end-notes'][0].text + '</p>');
   }
+
+    $("#restart").click(function () {
+        console.log("clicked start button");
+        $('#dialogueClicker').addClass('introDialogue');
+        speak('intro', 0);
+
+        $("#start").hide();
+    });
+    $("#end-credits").click(function () {
+        loadScene('credit-screen')
+    });
 })
