@@ -39,6 +39,7 @@ var speak = function (choice, talkStage) {
     playSound('uiChoice');
   }else{
     playSound('uiConfirm');
+
   }
   console.log('speak', choice, talkStage);
   story[choice][talkStage].text = story[choice][talkStage].text.replace(/\[recruited\]/g, recruit);
@@ -60,6 +61,7 @@ var speak = function (choice, talkStage) {
 var endSpeak = function () {
   console.log('Endspeak');
   playSound('uiConfirm');
+  console.log('END',choice);
   $('#dialogueContainer').addClass('hide');
   $('#dialogueClicker').removeClass('dialogueTakeover');
 }
@@ -81,6 +83,14 @@ $(function () {
       $('.loaderInner').css('width', percent + '%')
     },
     complete: function () {
+      fadeInSound('l1a');
+      fadeInSound('l2a');
+      fadeInSound('l3a');
+      fadeInSound('l4a');
+      fadeInSound('l5a');
+      fadeInSound('l6a');
+      fadeInSound('l7a');
+
       $('.scene .choices .choice').mouseenter(function(){
         playSound('uiHover');
       })

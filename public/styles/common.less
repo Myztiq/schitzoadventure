@@ -179,24 +179,36 @@ body{
 
 @-webkit-keyframes wiggle{
    0% {
-     -webkit-transform: rotate(10deg) scale(1);
+     -webkit-transform: rotate(0deg) scale(1);
+   }
+   25%{
+     -webkit-transform: rotate(10deg);
    }
    50%{
      -webkit-transform: scale(.8);
    }
+   75%{
+     -webkit-transform: rotate(-10deg);
+   }
    100% {
-     -webkit-transform: rotate(-10deg) scale(1);
+     -webkit-transform: rotate(0deg) scale(1);
    }
  }
 
 @keyframes wiggle{
   0% {
-    transform: rotate(10deg) scale(1);
+    transform: rotate(0deg) scale(1);
+  }
+  25%{
+    transform: rotate(10deg);
   }
   50%{
     transform: scale(.8);
   }
+  75%{
+    transform: rotate(-10deg);
+  }
   100% {
-    transform: rotate(-10deg) scale(1);
+    transform: rotate(0deg) scale(1);
   }
 }
