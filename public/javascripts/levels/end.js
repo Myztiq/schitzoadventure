@@ -13,7 +13,7 @@ $(function(){
         story['end-failure'][0].text = story['end-failure'][0].text.replace(/\[attack\]/g, attack);
         $("#endResult").text(story['end-failure'][0].text);
     }
-    $("#score").text(score);
+    $("#score").text("Final Score: " + score);
     $("#endNote").html('<p id="endNote">' + story['end-notes'][0].text + '</p>');
   }
 })
