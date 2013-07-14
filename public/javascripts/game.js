@@ -118,6 +118,22 @@ $(function () {
       fadeInSound('l6a');
       fadeInSound('l7a');
 
+//      fadeInSound('l1b');
+//      fadeInSound('l2b');
+//      fadeInSound('l3b');
+//      fadeInSound('l4b');
+//      fadeInSound('l5b');
+//      fadeInSound('l6b');
+//      fadeInSound('l7b');
+
+//      fadeInSound('l1c');
+//      fadeInSound('l2c');
+//      fadeInSound('l3c');
+//      fadeInSound('l4c');
+//      fadeInSound('l5c');
+//      fadeInSound('l6c');
+//      fadeInSound('l7c');
+
       $('.scene .choices .choice').mouseenter(function(){
         playSound('uiHover');
       })

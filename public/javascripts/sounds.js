@@ -30,13 +30,20 @@
   allSounds['l7c'] = allSounds['l7b'];
 
   var levels = {
-    'l1b': 40,
-    'l2b': 40,
-    'l3b': 40,
-    'l4b': 40,
-    'l5b': 40,
-    'l6b': 40,
-    'l7b': 40,
+    'l2a': 20,
+    'l2b': 20,
+    'l2c': 20,
+
+    'l4c': 40,
+    'l3c': 40,
+
+    'l1b': 30,
+    'l2b': 30,
+    'l3b': 30,
+    'l4b': 30,
+    'l5b': 30,
+    'l6b': 30,
+    'l7b': 30,
     'amb1': 80,
     'amb2': 80,
     'amb3': 80,
@@ -148,7 +155,7 @@
     sound.setVolume(0);
     sound.play({loops: 1000});
 
-    var targetLevel = .5;
+    var targetLevel = 50;
     if (levels[id]) {
       targetLevel = levels[id];
     }
@@ -160,7 +167,7 @@
       var x = setTimeout(function () {
         clearTimeout(x);
         var duration = new Date() - timer;
-        var currentStat = Math.floor(duration / fadeTime * 100) * targetLevel;
+        var currentStat = Math.floor(duration / fadeTime * 100) * targetLevel/100;
         if (currentStat < 200) {
           if (currentStat > 100) {
             currentStat = 100;
