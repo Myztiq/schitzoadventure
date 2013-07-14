@@ -22,10 +22,13 @@
     'l1a': 1
   }
 
+  var soundTimers = {}
+
   var soundTracking;
 
   window.loadSounds = function (options) {
     soundManager.setup({
+      debugMode: false,
       url: '/swf',
       flashVersion: 9, // optional: shiny features (default = 8)
       onready: function () {
@@ -61,7 +64,13 @@
   window.playSound = function (id) {
     var sound = soundManager.getSoundById(id);
     sound.setVolume(100);
-    sound.play({loops: 1});
+    if(sound.playState != 1){
+      soundTimers[id] = new Date()-30;
+    }
+    if((new Date()-soundTimers[id]) > 20){
+      sound.play({loops: 1});
+      soundTimers[id] = new Date();
+    }
   }
 
   window.fadeInSound = function (id) {

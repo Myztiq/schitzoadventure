@@ -39,6 +39,7 @@ var speak = function (choice, talkStage) {
     playSound('uiChoice');
   }else{
     playSound('uiConfirm');
+
   }
   console.log('speak', choice, talkStage);
   story[choice][talkStage].text = story[choice][talkStage].text.replace(/\[recruited\]/g, recruit);
@@ -60,6 +61,7 @@ var speak = function (choice, talkStage) {
 var endSpeak = function () {
   console.log('Endspeak');
   playSound('uiConfirm');
+  console.log('END',choice);
   $('#dialogueContainer').addClass('hide');
   $('#dialogueClicker').removeClass('dialogueTakeover');
 }
