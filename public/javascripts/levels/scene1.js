@@ -6,13 +6,13 @@ $(function () {
     speak(choice, talkStage);
     console.log('scene 1 loaded');
 
-    stopSound('l1a');
-    stopSound('l2a');
-    stopSound('l3a');
-    stopSound('l4a');
-    stopSound('l5a');
-    stopSound('l6a');
-    stopSound('l7a');
+    fadeOutSound('l1a');
+    fadeOutSound('l2a');
+    fadeOutSound('l3a');
+    fadeOutSound('l4a');
+    fadeOutSound('l5a');
+    fadeOutSound('l6a');
+    fadeOutSound('l7a');
   }
 
   $(document).on('click', ".scene1Dialogue", function () {
@@ -35,6 +35,8 @@ $(function () {
         $('#dialogueClicker').removeClass('scene1Dialogue');
         postChoice('scene2-intro');
         loadScene('scene2');
+//        endSpeak();
+//        loadScene('end');
       }
     }
     else {

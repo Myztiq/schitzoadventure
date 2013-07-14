@@ -50,8 +50,17 @@ var speak = function (choice, talkStage) {
 
   $('#dialogueContainer').addClass('hide');
   setTimeout(function () {
+    stopSound('general1');
+    stopSound('general2');
+    stopSound('general3');
+    stopSound('general4');
+    stopSound('general5');
+
     $('#dialogueContainer').removeClass('joan general narrator');
     $('#dialogueContainer').addClass(story[choice][talkStage].character);
+    if(story[choice][talkStage].character == 'general'){
+      playSound('general'+Math.floor((Math.random()*5)+1));
+    }
     $('#dialogueContainer').removeClass('hide');
 
     $('#currentDialogue').text(story[choice][talkStage].text);
@@ -59,6 +68,12 @@ var speak = function (choice, talkStage) {
 }
 
 var endSpeak = function () {
+  stopSound('general1');
+  stopSound('general2');
+  stopSound('general3');
+  stopSound('general4');
+  stopSound('general5');
+
   console.log('Endspeak');
   playSound('uiConfirm');
   console.log('END',choice);

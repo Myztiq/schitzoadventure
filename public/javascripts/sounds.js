@@ -9,7 +9,12 @@
     'visionConfirm': '/audio/vision_confirm.ogg',
     'uiChoice': '/audio/ui_choice.ogg',
     'uiConfirm': '/audio/ui_confirm.ogg',
-    'uiHover': '/audio/ui_hover.ogg'
+    'uiHover': '/audio/ui_hover.ogg',
+    'general1': '/audio/general_1.ogg',
+    'general2': '/audio/general_2.ogg',
+    'general3': '/audio/general_3.ogg',
+    'general4': '/audio/general_4.ogg',
+    'general5': '/audio/general_5.ogg'
   }
 
   for (var i = 1; i <= 7; i++) {
@@ -62,6 +67,7 @@
   }
 
   window.playSound = function (id) {
+    console.log('Playind sound: ',id);
     var sound = soundManager.getSoundById(id);
     sound.setVolume(100);
     if(sound.playState != 1){
@@ -74,6 +80,11 @@
   }
 
   window.stopSound = function(id){
+    var sound = soundManager.getSoundById(id);
+    sound.stop();
+  }
+
+  window.fadeOutSound = function(id){
     var sound = soundManager.getSoundById(id);
 
     var startVolume = sound.volume;
