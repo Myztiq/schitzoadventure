@@ -73,6 +73,31 @@
     }
   }
 
+  window.stopSound = function(id){
+    var sound = soundManager.getSoundById(id);
+
+    var startVolume = sound.volume;
+    console.log(startVolume);
+
+    var steps = 100;
+    var step = 0;
+    var handleFade = function () {
+      var x = setTimeout(function () {
+        step++;
+        clearTimeout(x);
+        var newVolume = startVolume * ((steps-step)/steps);
+        sound.setVolume(newVolume);
+        if(newVolume < 0){
+          sound.stop();
+        }else{
+          handleFade()
+        }
+      }, 10)
+    }
+    handleFade()
+
+  }
+
   window.fadeInSound = function (id) {
     if (!soundTracking) {
       soundTracking = new Date()

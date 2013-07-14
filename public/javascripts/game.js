@@ -83,6 +83,14 @@ $(function () {
       $('.loaderInner').css('width', percent + '%')
     },
     complete: function () {
+      fadeInSound('l1a');
+      fadeInSound('l2a');
+      fadeInSound('l3a');
+      fadeInSound('l4a');
+      fadeInSound('l5a');
+      fadeInSound('l6a');
+      fadeInSound('l7a');
+
       $('.scene .choices .choice').mouseenter(function(){
         playSound('uiHover');
       })

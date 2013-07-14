@@ -5,6 +5,14 @@ $(function () {
     $('#dialogueClicker').addClass('scene1Dialogue');
     speak(choice, talkStage);
     console.log('scene 1 loaded');
+
+    stopSound('l1a');
+    stopSound('l2a');
+    stopSound('l3a');
+    stopSound('l4a');
+    stopSound('l5a');
+    stopSound('l6a');
+    stopSound('l7a');
   }
 
   $(document).on('click', ".scene1Dialogue", function () {
