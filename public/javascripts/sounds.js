@@ -27,6 +27,8 @@
     allSounds['l' + i + 'c'] = 'https://s3.amazonaws.com/joansadventure/L' + i + '_c.wav'
   }
 
+  allSounds['l7c'] = allSounds['l7b'];
+
   var levels = {
     'l1b': 40,
     'l2b': 40,
