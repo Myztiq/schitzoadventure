@@ -24,7 +24,6 @@ $(function () {
         }, 1000);
       }
       else {
-        playSound('visionConfirm');
         $('#dialogueClicker').removeClass('scene1Dialogue');
         postChoice('scene2-intro');
         loadScene('scene2');

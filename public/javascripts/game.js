@@ -17,7 +17,6 @@ var scorePoint = function (amount) {
 }
 
 var postChoice = function (branch) {
-  playSound('uiChoice');
   talkStage = 0;
   maxTalk = story[branch].length;
   godSpoken = true;
@@ -36,6 +35,11 @@ var loadScene = function (sceneName) {
 }
 
 var speak = function (choice, talkStage) {
+  if(choice.indexOf('intro') == -1){
+    playSound('uiChoice');
+  }else{
+    playSound('uiConfirm');
+  }
   console.log('speak', choice, talkStage);
   story[choice][talkStage].text = story[choice][talkStage].text.replace(/\[recruited\]/g, recruit);
   story[choice][talkStage].text = story[choice][talkStage].text.replace(/\[equipment\]/g, equip);
@@ -55,6 +59,7 @@ var speak = function (choice, talkStage) {
 
 var endSpeak = function () {
   console.log('Endspeak');
+  playSound('uiConfirm');
   $('#dialogueContainer').addClass('hide');
   $('#dialogueClicker').removeClass('dialogueTakeover');
 }
@@ -76,6 +81,9 @@ $(function () {
       $('.loaderInner').css('width', percent + '%')
     },
     complete: function () {
+      $('.scene .choices .choice').mouseenter(function(){
+        playSound('uiHover');
+      })
       $('.loading').removeClass('loading');
     }
   })
