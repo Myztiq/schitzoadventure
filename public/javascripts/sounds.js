@@ -4,7 +4,12 @@
     'amb1': '/audio/amb1.ogg',
     'amb2': '/audio/amb2.ogg',
     'amb3': '/audio/amb3.ogg',
-    'amb4': '/audio/amb4.ogg'
+    'amb4': '/audio/amb4.ogg',
+    'visionAppear': '/audio/vision_appear.ogg',
+    'visionConfirm': '/audio/vision_confirm.ogg',
+    'uiChoice': '/audio/ui_choice.ogg',
+    'uiConfirm': '/audio/ui_confirm.ogg',
+    'uiHover': '/audio/ui_hover.ogg'
   }
 
   for(var i=1;i<=7;i++){
@@ -18,7 +23,6 @@
   }
 
   var soundTracking;
-
 
   window.loadSounds = function(options){
     soundManager.setup({
@@ -53,6 +57,13 @@
       }
     });
   }
+
+  window.playSound = function(id){
+    var sound = soundManager.getSoundById(id);
+    sound.setVolume(100);
+    sound.play({loops: 1});
+  }
+
   window.fadeInSound = function(id){
     if(!soundTracking){
       soundTracking = new Date()
