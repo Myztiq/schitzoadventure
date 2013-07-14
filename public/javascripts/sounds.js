@@ -47,6 +47,7 @@
 
   window.loadSounds = function (options) {
     soundManager.setup({
+      debugMode: false,
       url: '/swf',
       flashVersion: 9, // optional: shiny features (default = 8)
       onready: function () {
