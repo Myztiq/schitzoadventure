@@ -89,6 +89,8 @@ var endSpeak = function () {
   console.log('Endspeak');
   playSound('uiConfirm');
   console.log('END',choice);
+
+  $('#currentDialogue').text('');
   $('#dialogueContainer').addClass('hide');
   $('#dialogueClicker').removeClass('dialogueTakeover');
 }
