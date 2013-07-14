@@ -37,6 +37,7 @@ $(function () {
 
   $("#high-road").click(function () {
     fadeInSound('l3c');
+    scorePoint();
     postChoice('scene3-high');
     $('#dialogueClicker').addClass('scene3Dialogue');
   });
@@ -50,6 +51,7 @@ $(function () {
 
   $("#yellowbrick").click(function () {
     fadeInSound('l3b');
+    scorePoint();
     postChoice('scene3-yellow');
     $('#dialogueClicker').addClass('scene3Dialogue');
   });
