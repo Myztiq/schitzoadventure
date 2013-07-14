@@ -14,7 +14,12 @@
     'general2': '/audio/general_2.ogg',
     'general3': '/audio/general_3.ogg',
     'general4': '/audio/general_4.ogg',
-    'general5': '/audio/general_5.ogg'
+    'general5': '/audio/general_5.ogg',
+    'joan1': '/audio/joan_1.ogg',
+    'joan2': '/audio/joan_2.ogg',
+    'joan3': '/audio/joan_3.ogg',
+    'joan4': '/audio/joan_4.ogg',
+    'joan5': '/audio/joan_5.ogg'
   }
 
   for (var i = 1; i <= 7; i++) {

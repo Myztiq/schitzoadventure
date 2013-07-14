@@ -2,7 +2,6 @@ express = require 'express'
 http = require 'http'
 path = require 'path'
 less = require 'less-middleware'
-expressCoffee = require 'express-coffee'
 
 app = express()
 
@@ -15,11 +14,6 @@ app.configure ->
   app.use express.compress()
 
   app.use express.errorHandler()
-
-  app.use expressCoffee
-    path: __dirname + '/public'
-    live: !process.env.PRODUCTION
-    uglify: process.env.PRODUCTION
 
   app.use less
     src: path.join __dirname, 'public'
