@@ -1,5 +1,4 @@
 #main-menu{
-  padding-top: 90px;
   text-align: center;
   .background{
     position: absolute;
@@ -8,7 +7,35 @@
     z-index: 0;
   }
   #start{
+    cursor: pointer;
+    width: 214px;
+    height: 79px;
+    top: 90px;
+    left: 480px;
     z-index: 1;
-    position: relative;
+    position: absolute;
+    background: url('/images/startButton.png');
+    &:hover{
+      background: url('/images/startButtonClick.png');
+    }
+  }
+  #credits{
+    cursor: pointer;
+    width: 214px;
+    height: 79px;
+    top: 190px;
+    left: 480px;
+    z-index: 1;
+    position: absolute;
+    background: url('/images/creditsButton.png');
+    &:hover{
+      background: url('/images/creditsButtonClick.png');
+    }
+  }
+  #interrobang{
+    top: 290px;
+    z-index: 1;
+    left: 468px;
+    position: absolute;
   }
 }

@@ -11,6 +11,7 @@
 
     <script src='/javascripts/game.js'></script>
     <script src='/javascripts/story.js'></script>
+    <script src='/javascripts/levels/credits.js'></script>
     <script src='/javascripts/levels/intro.js'></script>
     <script src='/javascripts/levels/scene1.js'></script>
     <script src='/javascripts/levels/scene2.js'></script>
@@ -29,7 +30,26 @@
       <div class="loader"><div class="loaderInner"></div></div>
       <div id="main-menu" class="scene active">
         <img class="background" src="/images/mainMenuBG.png">
-        <div id="start" class="btn btn-primary">Start</div>
+        <div id="start"></div>
+        <div id="credits"></div>
+        <img src="/images/interrobangLogo.png" id="interrobang">
+      </div>
+      <div id="credit-screen" class="scene">
+        <img class="background" src="/images/creditScreen.png">
+        <div class="credits">
+          <a href="http://ryanscasey.com" target="_blank">Ryan Casey</a> - Designer, Writer
+          <br>
+          <a href="http://rdziezynski.wix.com/main" target="_blank">Rachel Dziezynski</a> - Music, SFX
+          <br>
+          <a href="http://ryan-kahn.com" target="_blank">Ryan Kahn</a> - Coder
+          <br>
+          <a href="" target="_blank">Nina Klymenko</a> - Artist
+          <br>
+          <a href="http://fenachrone.dyndns.org/" target="_blank">Alex Thorton-Clark</a> - Coder
+        </div>
+        <div class="instructions">
+          click to continue...
+        </div>
       </div>
       <div id="scene1" class="scene">
         <h2>Who do you want to recruit?</h2>
