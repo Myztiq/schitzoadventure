@@ -35,6 +35,7 @@ var loadScene = function(sceneName){
 }
 
 var speak = function(choice, talkStage){
+  console.log('speak', choice, talkStage);
   story[choice][talkStage].text = story[choice][talkStage].text.replace(/\[recruited\]/g, recruit);
   story[choice][talkStage].text = story[choice][talkStage].text.replace(/\[equipment\]/g, equip);
   story[choice][talkStage].text = story[choice][talkStage].text.replace(/\[diplomacy\]/g, diplomacy);

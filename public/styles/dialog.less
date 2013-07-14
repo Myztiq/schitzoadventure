@@ -1,4 +1,18 @@
-.dialogueTakeover{
+
+#dialogueContainer{
+  cursor: pointer;
+  img{
+    display: none;
+  }
+  position: relative;
+  height: 100%;
+  opacity: 1;
+  transition: opacity .5s;
+  &.hide{
+    opacity: 0;
+  }
+}
+#dialogueClicker.dialogueTakeover{
   font-family: CaslonPro, sans-serif;
   opacity: 1;
   top: 0px;
@@ -12,14 +26,10 @@
   .narrator{
     color: white;
   }
-
-  img{
-    display: none;
-  }
   .joan,.general{
     #currentDialogue{
       color: black;
-      width: 411px;
+      width: 400px;
       height: 160px;
       padding: 62px;
       position: absolute;
@@ -36,7 +46,7 @@
       display: block;
       position: absolute;
       height: 100%;
-      left: 20px;
+      left: -20px;
     }
   }
   .general{
@@ -48,13 +58,7 @@
       display: block;
       position: absolute;
       height: 100%;
-      right: 20px;
+      right: -20px;
     }
-  }
-}
-#dialogueContainer{
-  opacity: 1;
-  &.hide{
-    opacity: 0;
   }
 }

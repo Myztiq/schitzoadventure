@@ -2,7 +2,6 @@ $(function(){
   sceneSetup['scene4'] = function(){
       godSpoken = false;
       $('#dialogueClicker').addClass('scene4Dialogue');
-      speak(choice, talkStage);
       console.log('scene 4 loaded');
   }
 

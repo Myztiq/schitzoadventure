@@ -3,7 +3,6 @@ $(function(){
       godSpoken = false;
       setTimeout(function(){
         $('#dialogueClicker').addClass('scene5Dialogue');
-        speak(choice, talkStage);
       }, 1000);
       console.log('scene 5 loaded');
   }

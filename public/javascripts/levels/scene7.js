@@ -3,13 +3,12 @@ $(function(){
       godSpoken = false;
       setTimeout(function(){
         $('#dialogueClicker').addClass('scene7Dialogue');
-        speak(choice, talkStage);
       }, 1000);
       console.log('scene 7 loaded');
   }
 
     $(document).on('click', ".scene7Dialogue", function() {
-        console.log('Dialogue clicked');
+      console.log('Dialogue clicked');
       endSpeak()
         talkStage++;
         if (talkStage >= maxTalk) {

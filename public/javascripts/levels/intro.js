@@ -29,7 +29,9 @@ $(function(){
   $(document).on('click', ".introDialogue", function() {
       console.log('Dialogue clicked');
       endSpeak()
-      $('#dialogueClicker').removeClass('introDialogue');
+      setTimeout(function(){
+        $('#dialogueClicker').removeClass('introDialogue');
+      },500);
       postChoice('scene1-intro');
       loadScene('scene1');
   });

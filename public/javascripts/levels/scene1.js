@@ -9,7 +9,7 @@ $(function(){
 
   $(document).on('click', ".scene1Dialogue", function() {
       console.log('Dialogue clicked');
-      endSpeak()
+      endSpeak();
       talkStage++;
       if (talkStage >= maxTalk) {
           if (!godSpoken) {
