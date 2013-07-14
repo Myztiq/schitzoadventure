@@ -1,5 +1,6 @@
 $(function () {
   $("#start").click(function () {
+    playSound('visionConfirm');
     console.log("clicked start button");
     $('#dialogueClicker').addClass('introDialogue');
     speak('intro', 0);

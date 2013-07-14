@@ -1,35 +1,44 @@
 (function () {
 
   var allSounds = {
-    'amb1': '/audio/amb1.ogg',
-    'amb2': '/audio/amb2.ogg',
-    'amb3': '/audio/amb3.ogg',
-    'amb4': '/audio/amb4.ogg',
-    'visionAppear': '/audio/vision_appear.ogg',
-    'visionConfirm': '/audio/vision_confirm.ogg',
-    'uiChoice': '/audio/ui_choice.ogg',
-    'uiConfirm': '/audio/ui_confirm.ogg',
-    'uiHover': '/audio/ui_hover.ogg',
-    'general1': '/audio/general_1.ogg',
-    'general2': '/audio/general_2.ogg',
-    'general3': '/audio/general_3.ogg',
-    'general4': '/audio/general_4.ogg',
-    'general5': '/audio/general_5.ogg',
-    'joan1': '/audio/joan_1.ogg',
-    'joan2': '/audio/joan_2.ogg',
-    'joan3': '/audio/joan_3.ogg',
-    'joan4': '/audio/joan_4.ogg',
-    'joan5': '/audio/joan_5.ogg'
+    'amb1': 'https://s3.amazonaws.com/joansadventure/amb1.ogg',
+    'amb2': 'https://s3.amazonaws.com/joansadventure/amb2.ogg',
+    'amb3': 'https://s3.amazonaws.com/joansadventure/amb3.ogg',
+    'amb4': 'https://s3.amazonaws.com/joansadventure/amb4.ogg',
+    'visionAppear': 'https://s3.amazonaws.com/joansadventure/vision_appear.ogg',
+    'visionConfirm': 'https://s3.amazonaws.com/joansadventure/vision_confirm.ogg',
+    'uiChoice': 'https://s3.amazonaws.com/joansadventure/ui_choice.ogg',
+    'uiConfirm': 'https://s3.amazonaws.com/joansadventure/ui_confirm.ogg',
+    'uiHover': 'https://s3.amazonaws.com/joansadventure/ui_hover.ogg',
+    'general1': 'https://s3.amazonaws.com/joansadventure/general_1.ogg',
+    'general2': 'https://s3.amazonaws.com/joansadventure/general_2.ogg',
+    'general3': 'https://s3.amazonaws.com/joansadventure/general_3.ogg',
+    'general4': 'https://s3.amazonaws.com/joansadventure/general_4.ogg',
+    'general5': 'https://s3.amazonaws.com/joansadventure/general_5.ogg',
+    'joan1': 'https://s3.amazonaws.com/joansadventure/joan_1.ogg',
+    'joan2': 'https://s3.amazonaws.com/joansadventure/joan_2.ogg',
+    'joan3': 'https://s3.amazonaws.com/joansadventure/joan_3.ogg',
+    'joan4': 'https://s3.amazonaws.com/joansadventure/joan_4.ogg'
   }
 
   for (var i = 1; i <= 7; i++) {
-    allSounds['l' + i + 'a'] = '/audio/L' + i + '_a.wav'
-    allSounds['l' + i + 'b'] = '/audio/L' + i + '_b.wav'
-    allSounds['l' + i + 'c'] = '/audio/L' + i + '_c.wav'
+    allSounds['l' + i + 'a'] = 'https://s3.amazonaws.com/joansadventure/L' + i + '_a.wav'
+    allSounds['l' + i + 'b'] = 'https://s3.amazonaws.com/joansadventure/L' + i + '_b.wav'
+    allSounds['l' + i + 'c'] = 'https://s3.amazonaws.com/joansadventure/L' + i + '_c.wav'
   }
 
   var levels = {
-    'l1a': 1
+    'l1b': .4,
+    'l2b': .4,
+    'l3b': .4,
+    'l4b': .4,
+    'l5b': .4,
+    'l6b': .4,
+    'l7b': .4,
+    'amb1': .8,
+    'amb2': .8,
+    'amb3': .8,
+    'amb4': .8
   }
 
   var soundTimers = {}
@@ -38,7 +47,6 @@
 
   window.loadSounds = function (options) {
     soundManager.setup({
-      debugMode: false,
       url: '/swf',
       flashVersion: 9, // optional: shiny features (default = 8)
       onready: function () {
@@ -74,7 +82,12 @@
   window.playSound = function (id) {
     console.log('Playind sound: ',id);
     var sound = soundManager.getSoundById(id);
-    sound.setVolume(100);
+    var volume = 1;
+    if(levels[id]){
+      volume = levels[id];
+    }
+
+    sound.setVolume(volume);
     if(sound.playState != 1){
       soundTimers[id] = new Date()-30;
     }
@@ -130,7 +143,7 @@
     sound.setVolume(0);
     sound.play();
 
-    var targetLevel = 1;
+    var targetLevel = .5;
     if (levels[id]) {
       targetLevel = levels[id];
     }

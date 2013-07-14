@@ -60,14 +60,13 @@ var speak = function (choice, talkStage) {
     stopSound('joan2');
     stopSound('joan3');
     stopSound('joan4');
-    stopSound('joan5');
 
     $('#dialogueContainer').removeClass('joan general narrator');
     $('#dialogueContainer').addClass(story[choice][talkStage].character);
     if(story[choice][talkStage].character == 'general'){
       playSound('general'+Math.floor((Math.random()*5)+1));
     }else if(story[choice][talkStage].character == 'joan'){
-      playSound('joan'+Math.floor((Math.random()*5)+1));
+      playSound('joan'+Math.floor((Math.random()*4)+1));
     }
     $('#dialogueContainer').removeClass('hide');
 
@@ -86,7 +85,6 @@ var endSpeak = function () {
   stopSound('joan2');
   stopSound('joan3');
   stopSound('joan4');
-  stopSound('joan5');
 
   console.log('Endspeak');
   playSound('uiConfirm');
