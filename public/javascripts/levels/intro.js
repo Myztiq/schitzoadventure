@@ -18,6 +18,9 @@ $(function(){
 
 
   });
+  $("#credits").click(function() {
+    loadScene('credit-screen')
+  });
 
   /*$(".introDialogue").click(function() {
     console.log('Dialogue clicked');
