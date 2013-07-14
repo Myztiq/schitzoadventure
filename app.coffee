@@ -12,6 +12,8 @@ if process.env.serverURL?
 
 
 app.configure ->
+  app.use express.compress()
+
   app.use express.errorHandler()
 
   app.use expressCoffee
