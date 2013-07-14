@@ -8,12 +8,15 @@
     allSounds['l'+i+'c'] = '/audio/L'+i+'_c.wav'
   }
 
+  var levels = {
+    'l1a': 1
+  }
+
   var soundTracking;
 
 
   window.loadSounds = function(options){
     soundManager.setup({
-      debugMode: false,
       url: '/swf',
       flashVersion: 9, // optional: shiny features (default = 8)
       onready: function() {
@@ -57,13 +60,19 @@
     sound.setVolume(0);
     sound.play();
 
+    var targetLevel = 1;
+    if(levels[id]){
+      targetLevel = levels[id];
+    }
+
+
     var timer = new Date();
 
     var handleFade = function(){
       var x = setTimeout(function(){
         clearTimeout(x);
         var duration = new Date()-timer;
-        var currentStat = Math.floor(duration/fadeTime*100);
+        var currentStat = Math.floor(duration/fadeTime*100) * targetLevel;
         if(currentStat < 200){
           if(currentStat > 100){
             currentStat = 100;
