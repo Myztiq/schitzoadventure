@@ -1,4 +1,4 @@
-(function(){
+(function () {
 
   var allSounds = {
     'amb1': '/audio/amb1.ogg',
@@ -12,10 +12,10 @@
     'uiHover': '/audio/ui_hover.ogg'
   }
 
-  for(var i=1;i<=7;i++){
-    allSounds['l'+i+'a'] = '/audio/L'+i+'_a.wav'
-    allSounds['l'+i+'b'] = '/audio/L'+i+'_b.wav'
-    allSounds['l'+i+'c'] = '/audio/L'+i+'_c.wav'
+  for (var i = 1; i <= 7; i++) {
+    allSounds['l' + i + 'a'] = '/audio/L' + i + '_a.wav'
+    allSounds['l' + i + 'b'] = '/audio/L' + i + '_b.wav'
+    allSounds['l' + i + 'c'] = '/audio/L' + i + '_c.wav'
   }
 
   var levels = {
@@ -24,17 +24,17 @@
 
   var soundTracking;
 
-  window.loadSounds = function(options){
+  window.loadSounds = function (options) {
     soundManager.setup({
       url: '/swf',
       flashVersion: 9, // optional: shiny features (default = 8)
-      onready: function() {
+      onready: function () {
         var keys = Object.keys(allSounds);
         var counter = keys.length;
-        var handleLoaded = function(){
+        var handleLoaded = function () {
           counter--;
-          options.progress((keys.length-counter)/keys.length * 100);
-          if(counter == 0){
+          options.progress((keys.length - counter) / keys.length * 100);
+          if (counter == 0) {
             options.complete();
             soundManager.getSoundById('amb1').play();
             soundManager.getSoundById('amb2').play();
@@ -43,7 +43,7 @@
           }
         }
 
-        for(var i=0;i<keys.length;i++){
+        for (var i = 0; i < keys.length; i++) {
           var key = keys[i]
           var url = allSounds[key];
           soundManager.createSound({
@@ -58,14 +58,14 @@
     });
   }
 
-  window.playSound = function(id){
+  window.playSound = function (id) {
     var sound = soundManager.getSoundById(id);
     sound.setVolume(100);
     sound.play({loops: 1});
   }
 
-  window.fadeInSound = function(id){
-    if(!soundTracking){
+  window.fadeInSound = function (id) {
+    if (!soundTracking) {
       soundTracking = new Date()
     }
     var fadeTime = 2000;
@@ -81,20 +81,20 @@
     sound.play();
 
     var targetLevel = 1;
-    if(levels[id]){
+    if (levels[id]) {
       targetLevel = levels[id];
     }
 
 
     var timer = new Date();
 
-    var handleFade = function(){
-      var x = setTimeout(function(){
+    var handleFade = function () {
+      var x = setTimeout(function () {
         clearTimeout(x);
-        var duration = new Date()-timer;
-        var currentStat = Math.floor(duration/fadeTime*100) * targetLevel;
-        if(currentStat < 200){
-          if(currentStat > 100){
+        var duration = new Date() - timer;
+        var currentStat = Math.floor(duration / fadeTime * 100) * targetLevel;
+        if (currentStat < 200) {
+          if (currentStat > 100) {
             currentStat = 100;
             sound.setVolume(currentStat);
             return;
@@ -102,7 +102,7 @@
           sound.setVolume(currentStat);
           handleFade();
         }
-      },10)
+      }, 10)
     }
     handleFade()
   }

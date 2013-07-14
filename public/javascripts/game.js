@@ -8,33 +8,34 @@ var equip;
 var diplomacy;
 var attack;
 
-var scorePoint = function(amount){
-  if(!amount){
+var scorePoint = function (amount) {
+  if (!amount) {
     amount = 1;
   }
   score += amount;
   console.log(score.toString());
 }
 
-var postChoice = function(branch) {
-    talkStage = 0;
-    maxTalk = story[branch].length;
-    godSpoken = true;
-    choice = branch;
-    speak(branch, talkStage)
+var postChoice = function (branch) {
+  playSound('uiChoice');
+  talkStage = 0;
+  maxTalk = story[branch].length;
+  godSpoken = true;
+  choice = branch;
+  speak(branch, talkStage)
 }
 
 var sceneSetup = {}
 
-var loadScene = function(sceneName){
-  if(sceneSetup[sceneName]){
+var loadScene = function (sceneName) {
+  if (sceneSetup[sceneName]) {
     sceneSetup[sceneName]()
   }
   $(".scene.active").removeClass('active');
-  $('#'+sceneName).addClass('active');
+  $('#' + sceneName).addClass('active');
 }
 
-var speak = function(choice, talkStage){
+var speak = function (choice, talkStage) {
   console.log('speak', choice, talkStage);
   story[choice][talkStage].text = story[choice][talkStage].text.replace(/\[recruited\]/g, recruit);
   story[choice][talkStage].text = story[choice][talkStage].text.replace(/\[equipment\]/g, equip);
@@ -43,25 +44,25 @@ var speak = function(choice, talkStage){
   $('#dialogueClicker').addClass('dialogueTakeover');
 
   $('#dialogueContainer').addClass('hide');
-  setTimeout(function(){
+  setTimeout(function () {
     $('#dialogueContainer').removeClass('joan general narrator');
     $('#dialogueContainer').addClass(story[choice][talkStage].character);
     $('#dialogueContainer').removeClass('hide');
 
     $('#currentDialogue').text(story[choice][talkStage].text);
-  },500);
+  }, 500);
 }
 
-var endSpeak = function(){
+var endSpeak = function () {
   console.log('Endspeak');
   $('#dialogueContainer').addClass('hide');
   $('#dialogueClicker').removeClass('dialogueTakeover');
 }
 
-$(function(){
+$(function () {
   var useLoader = true;
 
-  if(!useLoader){
+  if (!useLoader) {
     $('.loading').removeClass('loading');
 
 //    setTimeout(function(){
@@ -71,10 +72,10 @@ $(function(){
     return;
   }
   loadSounds({
-    progress: function(percent){
-      $('.loaderInner').css('width',percent+'%')
+    progress: function (percent) {
+      $('.loaderInner').css('width', percent + '%')
     },
-    complete: function(){
+    complete: function () {
       $('.loading').removeClass('loading');
     }
   })

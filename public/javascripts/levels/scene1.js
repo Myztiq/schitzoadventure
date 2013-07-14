@@ -17,12 +17,14 @@ $(function () {
           playSound('visionAppear');
           $('#scene1').addClass('godVisible');
           $('#scene1 .exit').click(function () {
+            playSound('visionConfirm');
             $('#scene1').addClass('godHasSpoken').removeClass('godVisible');
             $('#dialogueClicker').removeClass('scene1Dialogue');
           })
         }, 1000);
       }
       else {
+        playSound('visionConfirm');
         $('#dialogueClicker').removeClass('scene1Dialogue');
         postChoice('scene2-intro');
         loadScene('scene2');

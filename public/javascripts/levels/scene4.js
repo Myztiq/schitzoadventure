@@ -15,6 +15,7 @@ $(function () {
           playSound('visionAppear');
           $('#scene4').addClass('godVisible');
           $('#scene4 .exit').click(function () {
+            playSound('visionConfirm');
             $('#scene4').addClass('godHasSpoken').removeClass('godVisible');
             $('#dialogueClicker').removeClass('scene4Dialogue');
           })
